@@ -1,0 +1,501 @@
+object fParametri: TfParametri
+  Left = 263
+  Height = 398
+  Top = 264
+  Width = 619
+  Caption = 'PARAMETRI OBRACUNA'
+  ClientHeight = 398
+  ClientWidth = 619
+  Font.CharSet = ANSI_CHARSET
+  Font.Color = clBlack
+  Font.Height = -16
+  Font.Name = 'Segoe UI'
+  Font.Pitch = fpVariable
+  Font.Quality = fqDraft
+  OnCreate = FormCreate
+  LCLVersion = '2.0.2.0'
+  object cyAdvPanel2: TcyAdvPanel
+    Left = 0
+    Height = 50
+    Top = 348
+    Width = 619
+    Wallpaper.Transparent = False
+    Align = alBottom
+    TabOrder = 0
+    Bevels = <    
+      item
+      end>
+    Degrade.FromColor = clWhite
+    Degrade.SpeedPercent = 100
+    Degrade.ToColor = clTeal
+    object btnZapamti: TcyAdvButton
+      Left = 72
+      Height = 30
+      Top = 8
+      Width = 150
+      Caption = 'Zapamti'
+      OnClick = btnZapamtiClick
+      TabOrder = 0
+      BordersNormal = <      
+        item
+          HighlightColor = clNavy
+          ShadowColor = clNavy
+        end>
+      BordersHot = <      
+        item
+          HighlightColor = clAqua
+          ShadowColor = clBlue
+        end>
+      BordersDown = <      
+        item
+          HighlightColor = clBlue
+          ShadowColor = clAqua
+        end>
+      BordersDisabled = <      
+        item
+          HighlightColor = clMaroon
+          ShadowColor = clMaroon
+        end>
+      ButtonNormal.Degrade.FromColor = clAqua
+      ButtonNormal.Degrade.SpeedPercent = 90
+      ButtonNormal.Degrade.ToColor = clBlue
+      ButtonNormal.Wallpaper.Transparent = False
+      ButtonHot.Degrade.BalanceMode = bmReverseFromColor
+      ButtonHot.Degrade.FromColor = clAqua
+      ButtonHot.Degrade.SpeedPercent = 100
+      ButtonHot.Degrade.ToColor = clBlue
+      ButtonHot.Wallpaper.Transparent = False
+      ButtonDown.Degrade.FromColor = clAqua
+      ButtonDown.Degrade.SpeedPercent = 100
+      ButtonDown.Degrade.ToColor = clAqua
+      ButtonDown.Wallpaper.Transparent = False
+      ButtonDisabled.Degrade.FromColor = clRed
+      ButtonDisabled.Degrade.SpeedPercent = 90
+      ButtonDisabled.Degrade.ToColor = clMaroon
+      ButtonDisabled.Wallpaper.Transparent = False
+      Wallpaper.Transparent = False
+    end
+    object btnIzlaz: TcyAdvButton
+      Left = 424
+      Height = 30
+      Top = 11
+      Width = 150
+      Caption = 'Izlaz'
+      OnClick = btnIzlazClick
+      TabOrder = 1
+      BordersNormal = <      
+        item
+          HighlightColor = clNavy
+          ShadowColor = clNavy
+        end>
+      BordersHot = <      
+        item
+          HighlightColor = clAqua
+          ShadowColor = clBlue
+        end>
+      BordersDown = <      
+        item
+          HighlightColor = clBlue
+          ShadowColor = clAqua
+        end>
+      BordersDisabled = <      
+        item
+          HighlightColor = clMaroon
+          ShadowColor = clMaroon
+        end>
+      ButtonNormal.Degrade.FromColor = clAqua
+      ButtonNormal.Degrade.SpeedPercent = 90
+      ButtonNormal.Degrade.ToColor = clBlue
+      ButtonNormal.Wallpaper.Transparent = False
+      ButtonHot.Degrade.BalanceMode = bmReverseFromColor
+      ButtonHot.Degrade.FromColor = clAqua
+      ButtonHot.Degrade.SpeedPercent = 100
+      ButtonHot.Degrade.ToColor = clBlue
+      ButtonHot.Wallpaper.Transparent = False
+      ButtonDown.Degrade.FromColor = clAqua
+      ButtonDown.Degrade.SpeedPercent = 100
+      ButtonDown.Degrade.ToColor = clAqua
+      ButtonDown.Wallpaper.Transparent = False
+      ButtonDisabled.Degrade.FromColor = clRed
+      ButtonDisabled.Degrade.SpeedPercent = 90
+      ButtonDisabled.Degrade.ToColor = clMaroon
+      ButtonDisabled.Wallpaper.Transparent = False
+      Wallpaper.Transparent = False
+    end
+  end
+  object dbeOsnovica: TDBEdit
+    Left = 241
+    Height = 29
+    Top = 45
+    Width = 145
+    DataField = 'osnovica'
+    DataSource = dsParametri
+    Alignment = taRightJustify
+    CharCase = ecNormal
+    MaxLength = 0
+    TabOrder = 1
+  end
+  object dbeStopaPoreza: TDBEdit
+    Left = 243
+    Height = 29
+    Top = 99
+    Width = 143
+    DataField = 'porez'
+    DataSource = dsParametri
+    Alignment = taRightJustify
+    CharCase = ecNormal
+    MaxLength = 0
+    TabOrder = 2
+  end
+  object stopaPIO: TDBEdit
+    Left = 241
+    Height = 29
+    Top = 141
+    Width = 145
+    DataField = 'PIO'
+    DataSource = dsParametri
+    Alignment = taRightJustify
+    CharCase = ecNormal
+    MaxLength = 0
+    TabOrder = 3
+  end
+  object dbeStopaZdravstvo: TDBEdit
+    Left = 240
+    Height = 29
+    Top = 190
+    Width = 146
+    DataField = 'zdravstvo'
+    DataSource = dsParametri
+    Alignment = taRightJustify
+    CharCase = ecNormal
+    MaxLength = 0
+    TabOrder = 4
+  end
+  object dbeTroskoviObrade: TDBEdit
+    Left = 241
+    Height = 29
+    Top = 235
+    Width = 145
+    DataField = 'adminTroskovi'
+    DataSource = dsParametri
+    Alignment = taRightJustify
+    CharCase = ecNormal
+    MaxLength = 0
+    TabOrder = 5
+  end
+  object Label1: TLabel
+    Left = 24
+    Height = 21
+    Top = 45
+    Width = 195
+    Caption = 'Osnovica za dnevni obracun'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 24
+    Height = 21
+    Top = 92
+    Width = 91
+    Caption = 'Stopa poreza'
+    ParentColor = False
+  end
+  object Label3: TLabel
+    Left = 24
+    Height = 21
+    Top = 139
+    Width = 124
+    Caption = 'Doprinosi  za PIO '
+    ParentColor = False
+  end
+  object Label4: TLabel
+    Left = 24
+    Height = 21
+    Top = 186
+    Width = 158
+    Caption = 'Doprinosi za zdravstvo'
+    ParentColor = False
+  end
+  object Label5: TLabel
+    Left = 24
+    Height = 21
+    Top = 233
+    Width = 112
+    Caption = 'Troskovi obrade'
+    ParentColor = False
+  end
+  object Label6: TLabel
+    Left = 400
+    Height = 21
+    Top = 49
+    Width = 40
+    Caption = '(RSD)'
+    ParentColor = False
+  end
+  object Label7: TLabel
+    Left = 400
+    Height = 21
+    Top = 102
+    Width = 13
+    Caption = '%'
+    ParentColor = False
+  end
+  object Label8: TLabel
+    Left = 401
+    Height = 21
+    Top = 143
+    Width = 13
+    Caption = '%'
+    ParentColor = False
+  end
+  object Label9: TLabel
+    Left = 400
+    Height = 21
+    Top = 192
+    Width = 13
+    Caption = '%'
+    ParentColor = False
+  end
+  object Label10: TLabel
+    Left = 400
+    Height = 21
+    Top = 239
+    Width = 13
+    Caption = '%'
+    ParentColor = False
+  end
+  object DBEdit1: TDBEdit
+    Left = 452
+    Height = 29
+    Top = 105
+    Width = 128
+    DataField = 'porezRSD'
+    DataSource = dsParametri
+    Alignment = taRightJustify
+    CharCase = ecNormal
+    Enabled = False
+    MaxLength = 0
+    TabOrder = 6
+  end
+  object DBEdit2: TDBEdit
+    Left = 452
+    Height = 29
+    Top = 147
+    Width = 128
+    DataField = 'PIORSD'
+    DataSource = dsParametri
+    Alignment = taRightJustify
+    CharCase = ecNormal
+    Enabled = False
+    MaxLength = 0
+    TabOrder = 7
+  end
+  object DBEdit3: TDBEdit
+    Left = 452
+    Height = 29
+    Top = 195
+    Width = 128
+    DataField = 'zdravstvoRSD'
+    DataSource = dsParametri
+    Alignment = taRightJustify
+    CharCase = ecNormal
+    Enabled = False
+    MaxLength = 0
+    TabOrder = 8
+  end
+  object dsParametri: TDataSource
+    DataSet = qParametri
+    left = 48
+    top = 280
+  end
+  object qParametri: TZQuery
+    Connection = fMain.conn
+    OnCalcFields = qParametriCalcFields
+    UpdateObject = usqlParametri
+    CachedUpdates = True
+    SQL.Strings = (
+      'select  *  from parametri'
+    )
+    Params = <>
+    left = 128
+    top = 280
+    object qParametriosnovica: TFloatField
+      FieldKind = fkData
+      FieldName = 'osnovica'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '#,##0.00'
+      MaxValue = 0
+      MinValue = 0
+      Precision = 10
+    end
+    object qParametriporez: TFloatField
+      FieldKind = fkData
+      FieldName = 'porez'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '#,##0.00'
+      MaxValue = 0
+      MinValue = 0
+      Precision = 10
+    end
+    object qParametriPIO: TFloatField
+      FieldKind = fkData
+      FieldName = 'PIO'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '#,##0.00'
+      MaxValue = 0
+      MinValue = 0
+      Precision = 10
+    end
+    object qParametrizdravstvo: TFloatField
+      FieldKind = fkData
+      FieldName = 'zdravstvo'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '#,##0.00'
+      MaxValue = 0
+      MinValue = 0
+      Precision = 10
+    end
+    object qParametriadminTroskovi: TFloatField
+      FieldKind = fkData
+      FieldName = 'adminTroskovi'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '#,##0.00'
+      MaxValue = 0
+      MinValue = 0
+      Precision = 10
+    end
+    object qParametrirBr: TLargeintField
+      FieldKind = fkData
+      FieldName = 'rBr'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+    end
+    object qParametriporezRSD: TCurrencyField
+      FieldKind = fkCalculated
+      FieldName = 'porezRSD'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '#,##0.00'
+      MaxValue = 0
+      MinValue = 0
+    end
+    object qParametriPIORSD: TCurrencyField
+      FieldKind = fkCalculated
+      FieldName = 'PIORSD'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '#,##0.00'
+      MaxValue = 0
+      MinValue = 0
+    end
+    object qParametrizdravstvoRSD: TCurrencyField
+      FieldKind = fkCalculated
+      FieldName = 'zdravstvoRSD'
+      Index = 8
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '#,##0.00'
+      MaxValue = 0
+      MinValue = 0
+    end
+    object qParametriobradaRSD: TCurrencyField
+      FieldKind = fkCalculated
+      FieldName = 'obradaRSD'
+      Index = 9
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '#,##0.00'
+      MaxValue = 0
+      MinValue = 0
+    end
+  end
+  object usqlParametri: TZUpdateSQL
+    DeleteSQL.Strings = (
+      'DELETE FROM parametri'
+      'WHERE'
+      '  ((parametri.rBr IS NULL AND :OLD_rBr IS NULL) OR (parametri.rBr = :OLD_rBr))'
+    )
+    InsertSQL.Strings = (
+      'INSERT INTO parametri'
+      '  (osnovica, porez, PIO, zdravstvo, adminTroskovi)'
+      'VALUES'
+      '  (:osnovica, :porez, :PIO, :zdravstvo, :adminTroskovi)'
+    )
+    ModifySQL.Strings = (
+      'UPDATE parametri SET'
+      '  osnovica = :osnovica,'
+      '  porez = :porez,'
+      '  PIO = :PIO,'
+      '  zdravstvo = :zdravstvo,'
+      '  adminTroskovi = :adminTroskovi'
+      'WHERE'
+      '  ((parametri.rBr IS NULL AND :OLD_rBr IS NULL) OR (parametri.rBr = :OLD_rBr))'
+    )
+    UseSequenceFieldForRefreshSQL = False
+    left = 208
+    top = 280
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'osnovica'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'porez'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'PIO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'zdravstvo'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'adminTroskovi'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_rBr'
+        ParamType = ptUnknown
+      end>
+  end
+end

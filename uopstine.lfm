@@ -1,0 +1,237 @@
+object fOpstine: TfOpstine
+  Left = 479
+  Height = 589
+  Top = 126
+  Width = 584
+  ClientHeight = 589
+  ClientWidth = 584
+  Font.CharSet = ANSI_CHARSET
+  Font.Color = clBlack
+  Font.Height = -16
+  Font.Name = 'Segoe UI'
+  Font.Pitch = fpVariable
+  Font.Quality = fqDraft
+  OnCreate = FormCreate
+  Position = poScreenCenter
+  LCLVersion = '2.0.2.0'
+  object cyAdvPanel1: TcyAdvPanel
+    Left = 0
+    Height = 50
+    Top = 0
+    Width = 584
+    Wallpaper.Transparent = False
+    Align = alTop
+    TabOrder = 0
+    Bevels = <    
+      item
+      end>
+    Degrade.FromColor = clWhite
+    Degrade.SpeedPercent = 100
+    Degrade.ToColor = clTeal
+  end
+  object cyAdvPanel2: TcyAdvPanel
+    Left = 0
+    Height = 50
+    Top = 539
+    Width = 584
+    Wallpaper.Transparent = False
+    Align = alBottom
+    TabOrder = 1
+    Bevels = <    
+      item
+      end>
+    Degrade.FromColor = clTeal
+    Degrade.SpeedPercent = 100
+    Degrade.ToColor = clBtnFace
+    object cyAdvButton1: TcyAdvButton
+      Left = 123
+      Height = 30
+      Top = 13
+      Width = 75
+      Caption = 'Zapamti'
+      OnClick = cyAdvButton1Click
+      TabOrder = 0
+      BordersNormal = <      
+        item
+          HighlightColor = clNavy
+          ShadowColor = clNavy
+        end>
+      BordersHot = <      
+        item
+          HighlightColor = clAqua
+          ShadowColor = clBlue
+        end>
+      BordersDown = <      
+        item
+          HighlightColor = clBlue
+          ShadowColor = clAqua
+        end>
+      BordersDisabled = <      
+        item
+          HighlightColor = clMaroon
+          ShadowColor = clMaroon
+        end>
+      ButtonNormal.Degrade.FromColor = clAqua
+      ButtonNormal.Degrade.SpeedPercent = 90
+      ButtonNormal.Degrade.ToColor = clBlue
+      ButtonNormal.Wallpaper.Transparent = False
+      ButtonHot.Degrade.BalanceMode = bmReverseFromColor
+      ButtonHot.Degrade.FromColor = clAqua
+      ButtonHot.Degrade.SpeedPercent = 100
+      ButtonHot.Degrade.ToColor = clBlue
+      ButtonHot.Wallpaper.Transparent = False
+      ButtonDown.Degrade.FromColor = clAqua
+      ButtonDown.Degrade.SpeedPercent = 100
+      ButtonDown.Degrade.ToColor = clAqua
+      ButtonDown.Wallpaper.Transparent = False
+      ButtonDisabled.Degrade.FromColor = clRed
+      ButtonDisabled.Degrade.SpeedPercent = 90
+      ButtonDisabled.Degrade.ToColor = clMaroon
+      ButtonDisabled.Wallpaper.Transparent = False
+      Wallpaper.Transparent = False
+    end
+    object cyAdvButton2: TcyAdvButton
+      Left = 387
+      Height = 30
+      Top = 14
+      Width = 75
+      Caption = 'Izlaz'
+      OnClick = cyAdvButton2Click
+      TabOrder = 1
+      BordersNormal = <      
+        item
+          HighlightColor = clNavy
+          ShadowColor = clNavy
+        end>
+      BordersHot = <      
+        item
+          HighlightColor = clAqua
+          ShadowColor = clBlue
+        end>
+      BordersDown = <      
+        item
+          HighlightColor = clBlue
+          ShadowColor = clAqua
+        end>
+      BordersDisabled = <      
+        item
+          HighlightColor = clMaroon
+          ShadowColor = clMaroon
+        end>
+      ButtonNormal.Degrade.FromColor = clAqua
+      ButtonNormal.Degrade.SpeedPercent = 90
+      ButtonNormal.Degrade.ToColor = clBlue
+      ButtonNormal.Wallpaper.Transparent = False
+      ButtonHot.Degrade.BalanceMode = bmReverseFromColor
+      ButtonHot.Degrade.FromColor = clAqua
+      ButtonHot.Degrade.SpeedPercent = 100
+      ButtonHot.Degrade.ToColor = clBlue
+      ButtonHot.Wallpaper.Transparent = False
+      ButtonDown.Degrade.FromColor = clAqua
+      ButtonDown.Degrade.SpeedPercent = 100
+      ButtonDown.Degrade.ToColor = clAqua
+      ButtonDown.Wallpaper.Transparent = False
+      ButtonDisabled.Degrade.FromColor = clRed
+      ButtonDisabled.Degrade.SpeedPercent = 90
+      ButtonDisabled.Degrade.ToColor = clMaroon
+      ButtonDisabled.Wallpaper.Transparent = False
+      Wallpaper.Transparent = False
+    end
+  end
+  object DBGrid1: TDBGrid
+    Left = 0
+    Height = 489
+    Top = 50
+    Width = 584
+    Align = alClient
+    Color = clWindow
+    Columns = <    
+      item
+        Title.Caption = 'rbr'
+        FieldName = 'rbr'
+      end    
+      item
+        Title.Caption = 'naziv opstine'
+        FieldName = 'nazivOpstine'
+      end    
+      item
+        Title.Caption = 'sifra'
+        FieldName = 'sifra'
+      end>
+    DataSource = dsOpstine
+    TabOrder = 2
+    TitleFont.CharSet = ANSI_CHARSET
+    TitleFont.Color = clBlack
+    TitleFont.Height = -16
+    TitleFont.Name = 'Segoe UI'
+    TitleFont.Pitch = fpVariable
+    TitleFont.Quality = fqDraft
+  end
+  object dsOpstine: TDataSource
+    DataSet = qOpstine
+    left = 108
+    top = 139
+  end
+  object qOpstine: TZQuery
+    Connection = fMain.conn
+    UpdateObject = usqlOpstine
+    CachedUpdates = True
+    SQL.Strings = (
+      'select * from opstine'
+    )
+    Params = <>
+    left = 186
+    top = 139
+  end
+  object usqlOpstine: TZUpdateSQL
+    DeleteSQL.Strings = (
+      'DELETE FROM opstine'
+      'WHERE'
+      '  ((opstine.sifra IS NULL AND :OLD_sifra IS NULL) OR (opstine.sifra = :OLD_sifra))'
+    )
+    InsertSQL.Strings = (
+      'INSERT INTO opstine'
+      '  (rbr, nazivOpstine, sifra, recNo)'
+      'VALUES'
+      '  (:rbr, :nazivOpstine, :sifra, :recNo)'
+    )
+    ModifySQL.Strings = (
+      'UPDATE opstine SET'
+      '  rbr = :rbr,'
+      '  nazivOpstine = :nazivOpstine,'
+      '  sifra = :sifra,'
+      '  recNo = :recNo'
+      'WHERE'
+      '  ((opstine.sifra IS NULL AND :OLD_sifra IS NULL) OR (opstine.sifra = :OLD_sifra))'
+    )
+    UseSequenceFieldForRefreshSQL = False
+    left = 260
+    top = 144
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'rbr'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'nazivOpstine'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'sifra'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'recNo'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_sifra'
+        ParamType = ptUnknown
+      end>
+  end
+end

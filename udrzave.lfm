@@ -1,0 +1,238 @@
+object fDrzave: TfDrzave
+  Left = 483
+  Height = 560
+  Top = 214
+  Width = 583
+  BorderIcons = []
+  BorderStyle = bsSingle
+  ClientHeight = 560
+  ClientWidth = 583
+  Font.CharSet = ANSI_CHARSET
+  Font.Color = clBlack
+  Font.Height = -16
+  Font.Name = 'Segoe UI'
+  Font.Pitch = fpVariable
+  Font.Quality = fqDraft
+  OnCreate = FormCreate
+  Position = poScreenCenter
+  LCLVersion = '2.0.2.0'
+  object cyAdvPanel1: TcyAdvPanel
+    Left = 0
+    Height = 50
+    Top = 0
+    Width = 583
+    Wallpaper.Transparent = False
+    Align = alTop
+    TabOrder = 0
+    Bevels = <    
+      item
+      end>
+    Degrade.FromColor = clTeal
+    Degrade.SpeedPercent = 100
+    Degrade.ToColor = clBtnFace
+    object eNazivDrzave: TEdit
+      Left = 152
+      Height = 29
+      Top = 15
+      Width = 240
+      OnKeyUp = eNazivDrzaveKeyUp
+      TabOrder = 0
+    end
+    object Label1: TLabel
+      Left = 37
+      Height = 21
+      Top = 18
+      Width = 108
+      Caption = 'Trazi po nazivu '
+      ParentColor = False
+    end
+  end
+  object cyAdvPanel2: TcyAdvPanel
+    Left = 0
+    Height = 50
+    Top = 510
+    Width = 583
+    Wallpaper.Transparent = False
+    Align = alBottom
+    TabOrder = 1
+    Bevels = <    
+      item
+      end>
+    Degrade.FromColor = clWhite
+    Degrade.SpeedPercent = 100
+    Degrade.ToColor = clTeal
+    object cyAdvButton1: TcyAdvButton
+      Left = 94
+      Height = 30
+      Top = 14
+      Width = 91
+      Caption = 'Zapamti'
+      OnClick = cyAdvButton1Click
+      TabOrder = 0
+      BordersNormal = <      
+        item
+          HighlightColor = clNavy
+          ShadowColor = clNavy
+        end>
+      BordersHot = <      
+        item
+          HighlightColor = clAqua
+          ShadowColor = clBlue
+        end>
+      BordersDown = <      
+        item
+          HighlightColor = clBlue
+          ShadowColor = clAqua
+        end>
+      BordersDisabled = <      
+        item
+          HighlightColor = clMaroon
+          ShadowColor = clMaroon
+        end>
+      ButtonNormal.Degrade.FromColor = clAqua
+      ButtonNormal.Degrade.SpeedPercent = 90
+      ButtonNormal.Degrade.ToColor = clBlue
+      ButtonNormal.Wallpaper.Transparent = False
+      ButtonHot.Degrade.BalanceMode = bmReverseFromColor
+      ButtonHot.Degrade.FromColor = clAqua
+      ButtonHot.Degrade.SpeedPercent = 100
+      ButtonHot.Degrade.ToColor = clBlue
+      ButtonHot.Wallpaper.Transparent = False
+      ButtonDown.Degrade.FromColor = clAqua
+      ButtonDown.Degrade.SpeedPercent = 100
+      ButtonDown.Degrade.ToColor = clAqua
+      ButtonDown.Wallpaper.Transparent = False
+      ButtonDisabled.Degrade.FromColor = clRed
+      ButtonDisabled.Degrade.SpeedPercent = 90
+      ButtonDisabled.Degrade.ToColor = clMaroon
+      ButtonDisabled.Wallpaper.Transparent = False
+      Wallpaper.Transparent = False
+    end
+    object cyAdvButton2: TcyAdvButton
+      Left = 389
+      Height = 30
+      Top = 13
+      Width = 91
+      Caption = 'Izlaz'
+      OnClick = cyAdvButton2Click
+      TabOrder = 1
+      BordersNormal = <      
+        item
+          HighlightColor = clNavy
+          ShadowColor = clNavy
+        end>
+      BordersHot = <      
+        item
+          HighlightColor = clAqua
+          ShadowColor = clBlue
+        end>
+      BordersDown = <      
+        item
+          HighlightColor = clBlue
+          ShadowColor = clAqua
+        end>
+      BordersDisabled = <      
+        item
+          HighlightColor = clMaroon
+          ShadowColor = clMaroon
+        end>
+      ButtonNormal.Degrade.FromColor = clAqua
+      ButtonNormal.Degrade.SpeedPercent = 90
+      ButtonNormal.Degrade.ToColor = clBlue
+      ButtonNormal.Wallpaper.Transparent = False
+      ButtonHot.Degrade.BalanceMode = bmReverseFromColor
+      ButtonHot.Degrade.FromColor = clAqua
+      ButtonHot.Degrade.SpeedPercent = 100
+      ButtonHot.Degrade.ToColor = clBlue
+      ButtonHot.Wallpaper.Transparent = False
+      ButtonDown.Degrade.FromColor = clAqua
+      ButtonDown.Degrade.SpeedPercent = 100
+      ButtonDown.Degrade.ToColor = clAqua
+      ButtonDown.Wallpaper.Transparent = False
+      ButtonDisabled.Degrade.FromColor = clRed
+      ButtonDisabled.Degrade.SpeedPercent = 90
+      ButtonDisabled.Degrade.ToColor = clMaroon
+      ButtonDisabled.Wallpaper.Transparent = False
+      Wallpaper.Transparent = False
+    end
+  end
+  object DBGrid1: TDBGrid
+    Left = 0
+    Height = 460
+    Top = 50
+    Width = 583
+    Align = alClient
+    Color = clWindow
+    Columns = <    
+      item
+        Title.Caption = 'Sifra drzave'
+        Width = 100
+        FieldName = 'sifrraDrzave'
+      end    
+      item
+        Title.Caption = 'Naziv drzave'
+        Width = 400
+        FieldName = 'nazivDrzave'
+      end>
+    DataSource = dsDrzave
+    TabOrder = 2
+    TitleFont.CharSet = ANSI_CHARSET
+    TitleFont.Color = clBlack
+    TitleFont.Height = -16
+    TitleFont.Name = 'Segoe UI'
+    TitleFont.Pitch = fpVariable
+    TitleFont.Quality = fqDraft
+  end
+  object dsDrzave: TDataSource
+    DataSet = qDrzave
+    left = 184
+    top = 120
+  end
+  object qDrzave: TZQuery
+    Connection = fMain.conn
+    SortType = stIgnored
+    OnFilterRecord = qDrzaveFilterRecord
+    UpdateObject = usqlDrzave
+    CachedUpdates = True
+    SQL.Strings = (
+      'select * from sifarnikDrzava'
+    )
+    Params = <>
+    left = 104
+    top = 118
+    object qDrzavesifrraDrzave: TStringField
+      FieldKind = fkData
+      FieldName = 'sifrraDrzave'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 12
+    end
+    object qDrzavenazivDrzave: TStringField
+      FieldKind = fkData
+      FieldName = 'nazivDrzave'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 200
+    end
+    object qDrzaverecNo: TLongintField
+      FieldKind = fkData
+      FieldName = 'recNo'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+  end
+  object usqlDrzave: TZUpdateSQL
+    UseSequenceFieldForRefreshSQL = False
+    left = 40
+    top = 118
+  end
+end

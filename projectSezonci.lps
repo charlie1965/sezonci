@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="11"/>
+    <BuildModes Count="2" Active="Release">
+      <Item1 Name="Debug">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <PathDelim Value="\"/>
+          <Target>
+            <Filename Value="projectSezonci"/>
+          </Target>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir)"/>
+            <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <Parsing>
+            <SyntaxOptions>
+              <IncludeAssertionCode Value="True"/>
+            </SyntaxOptions>
+          </Parsing>
+          <CodeGeneration>
+            <Checks>
+              <IOChecks Value="True"/>
+              <RangeChecks Value="True"/>
+              <OverflowChecks Value="True"/>
+              <StackChecks Value="True"/>
+            </Checks>
+            <VerifyObjMethodCallValidity Value="True"/>
+            <SmallerCode Value="True"/>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <DebugInfoType Value="dsDwarf2Set"/>
+              <UseHeaptrc Value="True"/>
+              <TrashVariables Value="True"/>
+              <UseExternalDbgSyms Value="True"/>
+            </Debugging>
+            <Options>
+              <Win32>
+                <GraphicApplication Value="True"/>
+              </Win32>
+            </Options>
+          </Linking>
+        </CompilerOptions>
+      </Item1>
+      <Item2 Name="Release">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <PathDelim Value="\"/>
+          <Target>
+            <Filename Value="projectSezonci"/>
+          </Target>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir)"/>
+            <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <CodeGeneration>
+            <SmartLinkUnit Value="True"/>
+            <Optimizations>
+              <OptimizationLevel Value="3"/>
+            </Optimizations>
+            <SmallerCode Value="True"/>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <GenerateDebugInfo Value="False"/>
+            </Debugging>
+            <LinkSmart Value="True"/>
+            <Options>
+              <Win32>
+                <GraphicApplication Value="True"/>
+              </Win32>
+            </Options>
+          </Linking>
+        </CompilerOptions>
+      </Item2>
+    </BuildModes>
+    <Units Count="16">
+      <Unit0>
+        <Filename Value="projectSezonci.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="51" Y="17"/>
+        <UsageCount Value="185"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="umain.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="fMain"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uMain"/>
+        <TopLine Value="85"/>
+        <CursorPos X="3" Y="87"/>
+        <UsageCount Value="185"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="udrzave.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="fDrzave"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uDrzave"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="13"/>
+        <CursorPos X="7" Y="32"/>
+        <UsageCount Value="185"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="uopstine.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="fOpstine"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uOpstine"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="24"/>
+        <CursorPos X="21" Y="29"/>
+        <UsageCount Value="183"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="uradnici.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="fRadnici"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uRadnici"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="109"/>
+        <CursorPos X="27" Y="129"/>
+        <UsageCount Value="181"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="uconfig.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="fConfig"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uConfig"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="56"/>
+        <CursorPos Y="91"/>
+        <UsageCount Value="161"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="uobracuni.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="fObracuni"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uObracuni"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="385"/>
+        <CursorPos X="64" Y="397"/>
+        <UsageCount Value="157"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="uposlodavci.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="fPoslodavci"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uPoslodavci"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="73"/>
+        <CursorPos X="23" Y="74"/>
+        <UsageCount Value="155"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="uparametri.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="fParametri"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uParametri"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="57"/>
+        <CursorPos X="37" Y="78"/>
+        <UsageCount Value="138"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="uposlovi.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="fPoslovi"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uPoslovi"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="27"/>
+        <CursorPos X="56" Y="48"/>
+        <UsageCount Value="129"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="uisplista.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uIspLista"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="58" Y="8"/>
+        <UsageCount Value="111"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="C:\Users\Korisnik\AppData\Local\lazarus\onlinepackagemanager\packages\zeosdbo\src\plain\ZPlainLoader.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="218"/>
+        <CursorPos Y="237"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="C:\Users\Korisnik\AppData\Local\lazarus\onlinepackagemanager\packages\zeosdbo\src\dbc\ZDbcSqLiteUtils.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="214"/>
+        <CursorPos Y="233"/>
+        <UsageCount Value="5"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="C:\Users\Korisnik\AppData\Local\lazarus\onlinepackagemanager\packages\zeosdbo\src\component\ZAbstractRODataset.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="3040"/>
+        <CursorPos X="31" Y="3048"/>
+        <UsageCount Value="11"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="C:\lazarus\lcl\dbctrls.pp"/>
+        <UnitName Value="DBCtrls"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1606"/>
+        <CursorPos X="33" Y="1617"/>
+        <UsageCount Value="2"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="C:\Users\Korisnik\AppData\Local\lazarus\onlinepackagemanager\packages\zeosdbo\src\component\ZSqlUpdate.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="801"/>
+        <CursorPos Y="819"/>
+        <UsageCount Value="3"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit15>
+    </Units>
+    <JumpHistory Count="11" HistoryIndex="10">
+      <Position1>
+        <Filename Value="uobracuni.pas"/>
+        <Caret Line="422" Column="45" TopLine="408"/>
+      </Position1>
+      <Position2>
+        <Filename Value="uobracuni.pas"/>
+        <Caret Line="423" Column="45" TopLine="409"/>
+      </Position2>
+      <Position3>
+        <Filename Value="uobracuni.pas"/>
+        <Caret Line="422" Column="56" TopLine="408"/>
+      </Position3>
+      <Position4>
+        <Filename Value="uobracuni.pas"/>
+        <Caret Line="423" Column="56" TopLine="409"/>
+      </Position4>
+      <Position5>
+        <Filename Value="uobracuni.pas"/>
+        <Caret Line="422" Column="56" TopLine="408"/>
+      </Position5>
+      <Position6>
+        <Filename Value="umain.pas"/>
+        <Caret Line="62" Column="3" TopLine="45"/>
+      </Position6>
+      <Position7>
+        <Filename Value="umain.pas"/>
+        <Caret Line="126" Column="69" TopLine="120"/>
+      </Position7>
+      <Position8>
+        <Filename Value="umain.pas"/>
+        <Caret Line="128" Column="69" TopLine="122"/>
+      </Position8>
+      <Position9>
+        <Filename Value="umain.pas"/>
+        <Caret Line="163" Column="3" TopLine="147"/>
+      </Position9>
+      <Position10>
+        <Filename Value="umain.pas"/>
+        <Caret Line="88" Column="3" TopLine="86"/>
+      </Position10>
+      <Position11>
+        <Filename Value="umain.pas"/>
+        <Caret Line="87" Column="3" TopLine="85"/>
+      </Position11>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="0" ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

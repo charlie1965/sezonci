@@ -1,0 +1,266 @@
+object fPoslovi: TfPoslovi
+  Left = 460
+  Height = 607
+  Top = 126
+  Width = 542
+  Caption = 'VRSTE SEZONSKIH POSLOVA'
+  ClientHeight = 607
+  ClientWidth = 542
+  Font.CharSet = ANSI_CHARSET
+  Font.Color = clBlack
+  Font.Height = -16
+  Font.Name = 'Segoe UI'
+  Font.Pitch = fpVariable
+  Font.Quality = fqDraft
+  OnCreate = FormCreate
+  LCLVersion = '2.0.2.0'
+  object cyAdvPanel1: TcyAdvPanel
+    Left = 0
+    Height = 50
+    Top = 0
+    Width = 542
+    Wallpaper.Transparent = False
+    Align = alTop
+    TabOrder = 0
+    Bevels = <    
+      item
+      end>
+    Degrade.FromColor = clTeal
+    Degrade.SpeedPercent = 100
+    Degrade.ToColor = clBtnFace
+  end
+  object cyAdvPanel2: TcyAdvPanel
+    Left = 0
+    Height = 50
+    Top = 557
+    Width = 542
+    Wallpaper.Transparent = False
+    Align = alBottom
+    TabOrder = 1
+    Bevels = <    
+      item
+      end>
+    Degrade.FromColor = clWhite
+    Degrade.SpeedPercent = 100
+    Degrade.ToColor = clTeal
+    object btnZapamti: TcyAdvButton
+      Left = 81
+      Height = 30
+      Top = 9
+      Width = 75
+      Caption = 'Zapamti'
+      OnClick = btnZapamtiClick
+      TabOrder = 0
+      BordersNormal = <      
+        item
+          HighlightColor = clNavy
+          ShadowColor = clNavy
+        end>
+      BordersHot = <      
+        item
+          HighlightColor = clAqua
+          ShadowColor = clBlue
+        end>
+      BordersDown = <      
+        item
+          HighlightColor = clBlue
+          ShadowColor = clAqua
+        end>
+      BordersDisabled = <      
+        item
+          HighlightColor = clMaroon
+          ShadowColor = clMaroon
+        end>
+      ButtonNormal.Degrade.FromColor = clAqua
+      ButtonNormal.Degrade.SpeedPercent = 90
+      ButtonNormal.Degrade.ToColor = clBlue
+      ButtonNormal.Wallpaper.Transparent = False
+      ButtonHot.Degrade.BalanceMode = bmReverseFromColor
+      ButtonHot.Degrade.FromColor = clAqua
+      ButtonHot.Degrade.SpeedPercent = 100
+      ButtonHot.Degrade.ToColor = clBlue
+      ButtonHot.Wallpaper.Transparent = False
+      ButtonDown.Degrade.FromColor = clAqua
+      ButtonDown.Degrade.SpeedPercent = 100
+      ButtonDown.Degrade.ToColor = clAqua
+      ButtonDown.Wallpaper.Transparent = False
+      ButtonDisabled.Degrade.FromColor = clRed
+      ButtonDisabled.Degrade.SpeedPercent = 90
+      ButtonDisabled.Degrade.ToColor = clMaroon
+      ButtonDisabled.Wallpaper.Transparent = False
+      Wallpaper.Transparent = False
+    end
+    object btnIzlaz: TcyAdvButton
+      Left = 325
+      Height = 30
+      Top = 9
+      Width = 75
+      Caption = 'Izlaz'
+      OnClick = btnIzlazClick
+      TabOrder = 1
+      BordersNormal = <      
+        item
+          HighlightColor = clNavy
+          ShadowColor = clNavy
+        end>
+      BordersHot = <      
+        item
+          HighlightColor = clAqua
+          ShadowColor = clBlue
+        end>
+      BordersDown = <      
+        item
+          HighlightColor = clBlue
+          ShadowColor = clAqua
+        end>
+      BordersDisabled = <      
+        item
+          HighlightColor = clMaroon
+          ShadowColor = clMaroon
+        end>
+      ButtonNormal.Degrade.FromColor = clAqua
+      ButtonNormal.Degrade.SpeedPercent = 90
+      ButtonNormal.Degrade.ToColor = clBlue
+      ButtonNormal.Wallpaper.Transparent = False
+      ButtonHot.Degrade.BalanceMode = bmReverseFromColor
+      ButtonHot.Degrade.FromColor = clAqua
+      ButtonHot.Degrade.SpeedPercent = 100
+      ButtonHot.Degrade.ToColor = clBlue
+      ButtonHot.Wallpaper.Transparent = False
+      ButtonDown.Degrade.FromColor = clAqua
+      ButtonDown.Degrade.SpeedPercent = 100
+      ButtonDown.Degrade.ToColor = clAqua
+      ButtonDown.Wallpaper.Transparent = False
+      ButtonDisabled.Degrade.FromColor = clRed
+      ButtonDisabled.Degrade.SpeedPercent = 90
+      ButtonDisabled.Degrade.ToColor = clMaroon
+      ButtonDisabled.Wallpaper.Transparent = False
+      Wallpaper.Transparent = False
+    end
+  end
+  object dbgPoslovi: TDBGrid
+    Left = 0
+    Height = 507
+    Top = 50
+    Width = 542
+    Align = alClient
+    Color = clWindow
+    Columns = <    
+      item
+        Title.Caption = 'sifra'
+        Width = 100
+        FieldName = 'sifra'
+      end    
+      item
+        Title.Caption = 'opisPosla'
+        Width = 400
+        FieldName = 'opisPosla'
+      end>
+    DataSource = dsPoslovi
+    TabOrder = 2
+    TitleFont.CharSet = ANSI_CHARSET
+    TitleFont.Color = clBlack
+    TitleFont.Height = -16
+    TitleFont.Name = 'Segoe UI'
+    TitleFont.Pitch = fpVariable
+    TitleFont.Quality = fqDraft
+  end
+  object dsPoslovi: TDataSource
+    DataSet = qPoslovi
+    left = 72
+    top = 165
+  end
+  object qPoslovi: TZQuery
+    Connection = fMain.conn
+    UpdateObject = usqlPoslovi
+    CachedUpdates = True
+    Active = True
+    SQL.Strings = (
+      'select *,rowid'
+      'from sifarnikPoslova'
+      'order by recNo'
+    )
+    ParamCheck = False
+    Params = <>
+    left = 128
+    top = 166
+    object qPoslovisifra: TStringField
+      Alignment = taRightJustify
+      FieldKind = fkData
+      FieldName = 'sifra'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 40
+    end
+    object qPosloviopisPosla: TStringField
+      FieldKind = fkData
+      FieldName = 'opisPosla'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 200
+    end
+    object qPoslovirecNo: TLargeintField
+      FieldKind = fkData
+      FieldName = 'recNo'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+    end
+    object qPoslovirowid: TLargeintField
+      FieldKind = fkData
+      FieldName = 'rowid'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+    end
+  end
+  object usqlPoslovi: TZUpdateSQL
+    DeleteSQL.Strings = (
+      'DELETE FROM sifarnikPoslova'
+      'WHERE'
+      '  ((sifarnikPoslova.rowid IS NULL AND :OLD_rowid IS NULL) OR (sifarnikPoslova.rowid = :OLD_rowid))'
+    )
+    InsertSQL.Strings = (
+      'INSERT INTO sifarnikPoslova'
+      '  (sifra, opisPosla)'
+      'VALUES'
+      '  (:sifra, :opisPosla)'
+    )
+    ModifySQL.Strings = (
+      'UPDATE sifarnikPoslova SET'
+      '  sifra = :sifra,'
+      '  opisPosla = :opisPosla'
+      'WHERE'
+      '  ((sifarnikPoslova.rowid IS NULL AND :OLD_rowid IS NULL) OR (sifarnikPoslova.rowid = :OLD_rowid))'
+    )
+    UseSequenceFieldForRefreshSQL = False
+    left = 192
+    top = 165
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'sifra'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'opisPosla'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_rowid'
+        ParamType = ptUnknown
+      end>
+  end
+end

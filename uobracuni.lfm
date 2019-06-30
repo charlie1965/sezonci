@@ -1,0 +1,3011 @@
+object fObracuni: TfObracuni
+  Left = 160
+  Height = 759
+  Top = 77
+  Width = 1324
+  Caption = 'OBRACUNI ZARADA I DOPRINOSA'
+  ClientHeight = 759
+  ClientWidth = 1324
+  Font.CharSet = ANSI_CHARSET
+  Font.Color = clBlack
+  Font.Height = -16
+  Font.Name = 'Segoe UI'
+  Font.Pitch = fpVariable
+  Font.Quality = fqDraft
+  OnCreate = FormCreate
+  Position = poScreenCenter
+  LCLVersion = '2.0.2.0'
+  object cyAdvPanel1: TcyAdvPanel
+    Left = 0
+    Height = 50
+    Top = 0
+    Width = 1324
+    Wallpaper.Transparent = False
+    Align = alTop
+    TabOrder = 0
+    Bevels = <    
+      item
+      end>
+    Degrade.FromColor = clTeal
+    Degrade.SpeedPercent = 100
+    Degrade.ToColor = clBtnFace
+  end
+  object cyAdvPanel2: TcyAdvPanel
+    Left = 0
+    Height = 50
+    Top = 709
+    Width = 1324
+    Wallpaper.Transparent = False
+    Align = alBottom
+    TabOrder = 1
+    OnClick = cyAdvPanel2Click
+    Bevels = <    
+      item
+      end>
+    Degrade.FromColor = clBtnFace
+    Degrade.SpeedPercent = 100
+    Degrade.ToColor = clTeal
+    object btnZapamti: TcyAdvButton
+      Left = 16
+      Height = 30
+      Top = 9
+      Width = 75
+      Caption = 'Zapamti'
+      OnClick = btnZapamtiClick
+      TabOrder = 0
+      BordersNormal = <      
+        item
+          HighlightColor = clNavy
+          ShadowColor = clNavy
+        end>
+      BordersHot = <      
+        item
+          HighlightColor = clAqua
+          ShadowColor = clBlue
+        end>
+      BordersDown = <      
+        item
+          HighlightColor = clBlue
+          ShadowColor = clAqua
+        end>
+      BordersDisabled = <      
+        item
+          HighlightColor = clMaroon
+          ShadowColor = clMaroon
+        end>
+      ButtonNormal.Degrade.FromColor = clAqua
+      ButtonNormal.Degrade.SpeedPercent = 90
+      ButtonNormal.Degrade.ToColor = clBlue
+      ButtonNormal.Wallpaper.Transparent = False
+      ButtonHot.Degrade.BalanceMode = bmReverseFromColor
+      ButtonHot.Degrade.FromColor = clAqua
+      ButtonHot.Degrade.SpeedPercent = 100
+      ButtonHot.Degrade.ToColor = clBlue
+      ButtonHot.Wallpaper.Transparent = False
+      ButtonDown.Degrade.FromColor = clAqua
+      ButtonDown.Degrade.SpeedPercent = 100
+      ButtonDown.Degrade.ToColor = clAqua
+      ButtonDown.Wallpaper.Transparent = False
+      ButtonDisabled.Degrade.FromColor = clRed
+      ButtonDisabled.Degrade.SpeedPercent = 90
+      ButtonDisabled.Degrade.ToColor = clMaroon
+      ButtonDisabled.Wallpaper.Transparent = False
+      Wallpaper.Transparent = False
+    end
+    object btnIzlaz: TcyAdvButton
+      Left = 1208
+      Height = 30
+      Top = 8
+      Width = 75
+      Caption = 'Izlaz'
+      Color = clYellow
+      OnClick = btnIzlazClick
+      TabOrder = 1
+      BordersNormal = <      
+        item
+          HighlightColor = clNavy
+          ShadowColor = clNavy
+        end>
+      BordersHot = <      
+        item
+          HighlightColor = clAqua
+          ShadowColor = clBlue
+        end>
+      BordersDown = <      
+        item
+          HighlightColor = clBlue
+          ShadowColor = clAqua
+        end>
+      BordersDisabled = <      
+        item
+          HighlightColor = clMaroon
+          ShadowColor = clMaroon
+        end>
+      ButtonNormal.Degrade.FromColor = clYellow
+      ButtonNormal.Degrade.SpeedPercent = 90
+      ButtonNormal.Degrade.ToColor = clBlue
+      ButtonNormal.Wallpaper.Transparent = False
+      ButtonHot.Degrade.BalanceMode = bmReverseFromColor
+      ButtonHot.Degrade.FromColor = clAqua
+      ButtonHot.Degrade.SpeedPercent = 100
+      ButtonHot.Degrade.ToColor = clBlue
+      ButtonHot.Wallpaper.Transparent = False
+      ButtonDown.Degrade.FromColor = clAqua
+      ButtonDown.Degrade.SpeedPercent = 100
+      ButtonDown.Degrade.ToColor = clAqua
+      ButtonDown.Wallpaper.Transparent = False
+      ButtonDisabled.Degrade.FromColor = clRed
+      ButtonDisabled.Degrade.SpeedPercent = 90
+      ButtonDisabled.Degrade.ToColor = clMaroon
+      ButtonDisabled.Wallpaper.Transparent = False
+      Wallpaper.Transparent = False
+    end
+    object btnObracun: TcyBitBtn
+      Left = 96
+      Height = 30
+      Top = 9
+      Width = 96
+      Caption = 'Obracun'
+      OnClick = btnObracunClick
+      TabOrder = 2
+      MonochromeGlyphColor = clBlack
+      Degrade.FromColor = clYellow
+      Degrade.SpeedPercent = 90
+      Degrade.ToColor = 33023
+      Wallpaper.Transparent = False
+    end
+    object btnXML: TcyAdvButton
+      Left = 1016
+      Height = 30
+      Top = 8
+      Width = 147
+      Caption = 'XML export'
+      OnClick = btnXMLClick
+      TabOrder = 3
+      BordersNormal = <      
+        item
+          HighlightColor = clNavy
+          ShadowColor = clNavy
+        end>
+      BordersHot = <      
+        item
+          HighlightColor = clAqua
+          ShadowColor = clBlue
+        end>
+      BordersDown = <      
+        item
+          HighlightColor = clBlue
+          ShadowColor = clAqua
+        end>
+      BordersDisabled = <      
+        item
+          HighlightColor = clMaroon
+          ShadowColor = clMaroon
+        end>
+      ButtonNormal.Degrade.FromColor = clAqua
+      ButtonNormal.Degrade.SpeedPercent = 90
+      ButtonNormal.Degrade.ToColor = clBlue
+      ButtonNormal.Wallpaper.Transparent = False
+      ButtonHot.Degrade.BalanceMode = bmReverseFromColor
+      ButtonHot.Degrade.FromColor = clAqua
+      ButtonHot.Degrade.SpeedPercent = 100
+      ButtonHot.Degrade.ToColor = clBlue
+      ButtonHot.Wallpaper.Transparent = False
+      ButtonDown.Degrade.FromColor = clAqua
+      ButtonDown.Degrade.SpeedPercent = 100
+      ButtonDown.Degrade.ToColor = clAqua
+      ButtonDown.Wallpaper.Transparent = False
+      ButtonDisabled.Degrade.FromColor = clRed
+      ButtonDisabled.Degrade.SpeedPercent = 90
+      ButtonDisabled.Degrade.ToColor = clMaroon
+      ButtonDisabled.Wallpaper.Transparent = False
+      Wallpaper.Transparent = False
+    end
+    object DBEdit15: TDBEdit
+      Left = 417
+      Height = 29
+      Top = 5
+      Width = 152
+      DataField = 'netoSuma'
+      DataSource = dsSumaNeto
+      Alignment = taRightJustify
+      CharCase = ecNormal
+      Enabled = False
+      MaxLength = 0
+      TabOrder = 4
+    end
+    object btnFaktura: TcyAdvButton
+      Left = 216
+      Height = 30
+      Top = 9
+      Width = 146
+      Caption = 'Faktura'
+      Enabled = False
+      OnClick = btnFakturaClick
+      TabOrder = 5
+      BordersNormal = <      
+        item
+          HighlightColor = clNavy
+          ShadowColor = clNavy
+        end>
+      BordersHot = <      
+        item
+          HighlightColor = clAqua
+          ShadowColor = clBlue
+        end>
+      BordersDown = <      
+        item
+          HighlightColor = clBlue
+          ShadowColor = clAqua
+        end>
+      BordersDisabled = <      
+        item
+          HighlightColor = clMaroon
+          ShadowColor = clMaroon
+        end>
+      ButtonNormal.Degrade.FromColor = clAqua
+      ButtonNormal.Degrade.SpeedPercent = 90
+      ButtonNormal.Degrade.ToColor = clBlue
+      ButtonNormal.Wallpaper.Transparent = False
+      ButtonHot.Degrade.BalanceMode = bmReverseFromColor
+      ButtonHot.Degrade.FromColor = clAqua
+      ButtonHot.Degrade.SpeedPercent = 100
+      ButtonHot.Degrade.ToColor = clBlue
+      ButtonHot.Wallpaper.Transparent = False
+      ButtonDown.Degrade.FromColor = clAqua
+      ButtonDown.Degrade.SpeedPercent = 100
+      ButtonDown.Degrade.ToColor = clAqua
+      ButtonDown.Wallpaper.Transparent = False
+      ButtonDisabled.Degrade.FromColor = clRed
+      ButtonDisabled.Degrade.SpeedPercent = 90
+      ButtonDisabled.Degrade.ToColor = clMaroon
+      ButtonDisabled.Wallpaper.Transparent = False
+      Wallpaper.Transparent = False
+    end
+    object btnIsplatnaLista: TcyAdvButton
+      Left = 840
+      Height = 30
+      Top = 9
+      Width = 152
+      Caption = 'Isplatna lista'
+      OnClick = btnIsplatnaListaClick
+      TabOrder = 6
+      BordersNormal = <      
+        item
+          HighlightColor = clNavy
+          ShadowColor = clNavy
+        end>
+      BordersHot = <      
+        item
+          HighlightColor = clAqua
+          ShadowColor = clBlue
+        end>
+      BordersDown = <      
+        item
+          HighlightColor = clBlue
+          ShadowColor = clAqua
+        end>
+      BordersDisabled = <      
+        item
+          HighlightColor = clMaroon
+          ShadowColor = clMaroon
+        end>
+      ButtonNormal.Degrade.FromColor = clAqua
+      ButtonNormal.Degrade.SpeedPercent = 90
+      ButtonNormal.Degrade.ToColor = clBlue
+      ButtonNormal.Wallpaper.Transparent = False
+      ButtonHot.Degrade.BalanceMode = bmReverseFromColor
+      ButtonHot.Degrade.FromColor = clAqua
+      ButtonHot.Degrade.SpeedPercent = 100
+      ButtonHot.Degrade.ToColor = clBlue
+      ButtonHot.Wallpaper.Transparent = False
+      ButtonDown.Degrade.FromColor = clAqua
+      ButtonDown.Degrade.SpeedPercent = 100
+      ButtonDown.Degrade.ToColor = clAqua
+      ButtonDown.Wallpaper.Transparent = False
+      ButtonDisabled.Degrade.FromColor = clRed
+      ButtonDisabled.Degrade.SpeedPercent = 90
+      ButtonDisabled.Degrade.ToColor = clMaroon
+      ButtonDisabled.Wallpaper.Transparent = False
+      Wallpaper.Transparent = False
+    end
+    object Button1: TButton
+      Left = 606
+      Height = 30
+      Top = 8
+      Width = 187
+      Caption = 'Pojedinacan obracun'
+      OnClick = Button1Click
+      TabOrder = 7
+    end
+  end
+  object Panel1: TPanel
+    Left = 216
+    Height = 659
+    Top = 50
+    Width = 1108
+    Align = alClient
+    ClientHeight = 659
+    ClientWidth = 1108
+    Color = clMoneyGreen
+    ParentColor = False
+    TabOrder = 2
+    object dbeFirma: TDBEdit
+      Left = 93
+      Height = 29
+      Top = 16
+      Width = 80
+      DataField = 'firma'
+      DataSource = dsZaglavlje
+      Alignment = taRightJustify
+      CharCase = ecNormal
+      Color = 8454143
+      MaxLength = 0
+      TabOrder = 0
+    end
+    object dblFirma: TDBLookupComboBox
+      Left = 228
+      Height = 29
+      Top = 16
+      Width = 334
+      Color = 8454143
+      DataField = 'firma'
+      DataSource = dsZaglavlje
+      KeyField = 'sifra'
+      ListField = 'naziv'
+      ListFieldIndex = 0
+      ListSource = dsFirme
+      LookupCache = False
+      TabOrder = 1
+    end
+    object Label1: TLabel
+      Left = 8
+      Height = 21
+      Top = 24
+      Width = 72
+      Caption = 'R.Br. firme'
+      ParentColor = False
+    end
+    object Label2: TLabel
+      Left = 432
+      Height = 21
+      Top = 29
+      Width = 43
+      Caption = 'Naziv '
+      ParentColor = False
+    end
+    object DBDateTimePicker1: TDBDateTimePicker
+      Left = 644
+      Height = 29
+      Top = 16
+      Width = 143
+      DataField = 'datumPocetka'
+      DataSource = dsZaglavlje
+      ReadOnly = False
+      CenturyFrom = 1941
+      MaxDate = 2958465
+      MinDate = -53780
+      AutoSize = False
+      TabOrder = 2
+      Color = 8454143
+      TrailingSeparator = False
+      TextForNullDate = 'NULL'
+      LeadingZeros = True
+      Kind = dtkDate
+      TimeFormat = tf24
+      TimeDisplay = tdHMS
+      DateMode = dmComboBox
+      UseDefaultSeparators = True
+      HideDateTimeParts = []
+      MonthNames = 'Long'
+    end
+    object DBDateTimePicker2: TDBDateTimePicker
+      Left = 868
+      Height = 29
+      Top = 16
+      Width = 136
+      DataField = 'datumZavrsetka'
+      DataSource = dsZaglavlje
+      ReadOnly = False
+      CenturyFrom = 1941
+      MaxDate = 2958465
+      MinDate = -53780
+      AutoSize = False
+      TabOrder = 3
+      Color = 8454143
+      TrailingSeparator = False
+      TextForNullDate = 'NULL'
+      LeadingZeros = True
+      Kind = dtkDate
+      TimeFormat = tf24
+      TimeDisplay = tdHMS
+      DateMode = dmComboBox
+      UseDefaultSeparators = True
+      HideDateTimeParts = []
+      MonthNames = 'Long'
+    end
+    object Label3: TLabel
+      Left = 580
+      Height = 21
+      Top = 24
+      Width = 54
+      Caption = 'Pocetak'
+      ParentColor = False
+    end
+    object Label4: TLabel
+      Left = 796
+      Height = 21
+      Top = 24
+      Width = 67
+      Caption = 'Zavrsetak'
+      ParentColor = False
+    end
+    object dbeOpisRadova: TDBEdit
+      Left = 172
+      Height = 29
+      Top = 56
+      Width = 832
+      DataField = 'opisRadova'
+      DataSource = dsZaglavlje
+      CharCase = ecNormal
+      Color = 8454143
+      MaxLength = 400
+      TabOrder = 4
+    end
+    object Label5: TLabel
+      Left = 8
+      Height = 21
+      Top = 59
+      Width = 150
+      Caption = 'Opis izvrsenih radova'
+      ParentColor = False
+    end
+    object Label6: TLabel
+      Left = 8
+      Height = 21
+      Top = 97
+      Width = 167
+      Caption = 'Datum izdavanja racuna'
+      ParentColor = False
+    end
+    object DBDateTimePicker3: TDBDateTimePicker
+      Left = 194
+      Height = 29
+      Top = 92
+      Width = 170
+      DataField = 'datumIzdavanja'
+      DataSource = dsZaglavlje
+      ReadOnly = False
+      CenturyFrom = 1941
+      MaxDate = 2958465
+      MinDate = -53780
+      AutoSize = False
+      TabOrder = 5
+      Color = 8454143
+      TrailingSeparator = False
+      TextForNullDate = 'NULL'
+      LeadingZeros = True
+      Kind = dtkDate
+      TimeFormat = tf24
+      TimeDisplay = tdHMS
+      DateMode = dmComboBox
+      UseDefaultSeparators = True
+      HideDateTimeParts = []
+      MonthNames = 'Long'
+    end
+    object Label8: TLabel
+      Left = 386
+      Height = 21
+      Top = 97
+      Width = 163
+      Caption = 'Mesto izdavanja racuna'
+      ParentColor = False
+    end
+    object dbeMestoIzdavanja: TDBEdit
+      Left = 560
+      Height = 29
+      Top = 93
+      Width = 444
+      DataField = 'mestoIzdavanja'
+      DataSource = dsZaglavlje
+      CharCase = ecNormal
+      Color = 8454143
+      MaxLength = 100
+      TabOrder = 6
+    end
+    object lblTroskovi: TLabel
+      Left = 8
+      Height = 21
+      Top = 134
+      Width = 178
+      Caption = 'Procenat troskova obrade'
+      ParentColor = False
+    end
+    object dbeProcenatTroskova: TDBEdit
+      Left = 194
+      Height = 29
+      Top = 130
+      Width = 86
+      DataField = 'procenatZadruge'
+      DataSource = dsZaglavlje
+      Alignment = taRightJustify
+      AutoSize = False
+      CharCase = ecNormal
+      Color = 8454143
+      MaxLength = 0
+      TabOrder = 7
+    end
+    object Label9: TLabel
+      Left = 288
+      Height = 21
+      Top = 135
+      Width = 13
+      Caption = '%'
+      ParentColor = False
+    end
+    object Label10: TLabel
+      Left = 312
+      Height = 21
+      Top = 134
+      Width = 133
+      Caption = 'Osnovica obracuna'
+      ParentColor = False
+    end
+    object dbeOsnovicaObracuna: TDBEdit
+      Left = 450
+      Height = 29
+      Top = 130
+      Width = 78
+      DataField = 'osnovicaObracuna'
+      DataSource = dsZaglavlje
+      Alignment = taRightJustify
+      AutoSize = False
+      CharCase = ecNormal
+      Color = 8454143
+      MaxLength = 0
+      TabOrder = 8
+    end
+    object Label11: TLabel
+      Left = 536
+      Height = 21
+      Top = 135
+      Width = 30
+      Caption = 'RSD'
+      ParentColor = False
+    end
+    object Panel2: TPanel
+      Left = 1
+      Height = 490
+      Top = 168
+      Width = 1106
+      Align = alBottom
+      ClientHeight = 490
+      ClientWidth = 1106
+      TabOrder = 9
+      object DBGrid1: TDBGrid
+        Left = 1
+        Height = 488
+        Top = 1
+        Width = 407
+        Align = alLeft
+        Color = clWindow
+        Columns = <        
+          item
+            Title.Caption = 'radnik'
+            Width = 60
+            FieldName = 'radnik'
+          end        
+          item
+            PickList.Strings = (
+              'Andesilic Branko'
+              'Andesilic Cedo'
+              'Cabarkapa Predrag'
+              'Farkas Andreja'
+            )
+            Title.Caption = 'prezime i ime'
+            Width = 180
+            FieldName = 'imePrezime'
+          end        
+          item
+            Title.Caption = 'neto zarada'
+            Width = 100
+            FieldName = 'neto'
+          end>
+        DataSource = dsStavke
+        TabOrder = 0
+        TitleFont.CharSet = ANSI_CHARSET
+        TitleFont.Color = clBlack
+        TitleFont.Height = -16
+        TitleFont.Name = 'Segoe UI'
+        TitleFont.Pitch = fpVariable
+        TitleFont.Quality = fqDraft
+        OnColEnter = DBGrid1ColEnter
+        OnColExit = DBGrid1ColExit
+        OnDrawColumnCell = DBGrid1DrawColumnCell
+        OnKeyPress = DBGrid1KeyPress
+      end
+      object dtOdDana: TDBDateTimePicker
+        Left = 480
+        Height = 29
+        Top = 21
+        Width = 103
+        DataField = 'odDana'
+        DataSource = dsStavke
+        ReadOnly = False
+        CenturyFrom = 1941
+        MaxDate = 2958465
+        MinDate = -53780
+        AutoSize = False
+        TabOrder = 1
+        TrailingSeparator = False
+        TextForNullDate = 'NULL'
+        LeadingZeros = True
+        Kind = dtkDate
+        TimeFormat = tf24
+        TimeDisplay = tdHMS
+        DateMode = dmComboBox
+        UseDefaultSeparators = True
+        HideDateTimeParts = []
+        MonthNames = 'Long'
+        OnExit = dtOdDanaExit
+      end
+      object dtDoDana: TDBDateTimePicker
+        Left = 645
+        Height = 29
+        Top = 21
+        Width = 103
+        DataField = 'doDana'
+        DataSource = dsStavke
+        ReadOnly = False
+        CenturyFrom = 1941
+        MaxDate = 2958465
+        MinDate = -53780
+        AutoSize = False
+        TabOrder = 2
+        TrailingSeparator = False
+        TextForNullDate = 'NULL'
+        LeadingZeros = True
+        Kind = dtkDate
+        TimeFormat = tf24
+        TimeDisplay = tdHMS
+        DateMode = dmComboBox
+        UseDefaultSeparators = True
+        HideDateTimeParts = []
+        MonthNames = 'Long'
+        OnExit = dtOdDanaExit
+      end
+      object dbBrojDana: TDBEdit
+        Left = 832
+        Height = 29
+        Top = 21
+        Width = 80
+        DataField = 'sati'
+        DataSource = dsStavke
+        Alignment = taRightJustify
+        AutoSize = False
+        CharCase = ecNormal
+        Enabled = False
+        MaxLength = 0
+        TabOrder = 3
+      end
+      object Label14: TLabel
+        Left = 416
+        Height = 21
+        Top = 27
+        Width = 59
+        Caption = 'Od dana'
+        ParentColor = False
+      end
+      object Label15: TLabel
+        Left = 584
+        Height = 21
+        Top = 27
+        Width = 58
+        Caption = 'Do dana'
+        ParentColor = False
+      end
+      object Label17: TLabel
+        Left = 760
+        Height = 21
+        Top = 25
+        Width = 66
+        Caption = 'Broj dana'
+        ParentColor = False
+      end
+      object dbeOsnovica: TDBEdit
+        Left = 480
+        Height = 29
+        Top = 106
+        Width = 103
+        DataField = 'osnovica'
+        DataSource = dsStavke
+        Alignment = taRightJustify
+        CharCase = ecNormal
+        Enabled = False
+        MaxLength = 0
+        TabOrder = 4
+      end
+      object Label18: TLabel
+        Left = 488
+        Height = 21
+        Top = 80
+        Width = 64
+        Caption = 'Osnovica'
+        ParentColor = False
+      end
+      object Label19: TLabel
+        Left = 618
+        Height = 21
+        Top = 80
+        Width = 66
+        Caption = 'Porez (%)'
+        ParentColor = False
+      end
+      object Label20: TLabel
+        Left = 741
+        Height = 21
+        Top = 80
+        Width = 48
+        Caption = 'PIO(%)'
+        ParentColor = False
+      end
+      object Label21: TLabel
+        Left = 824
+        Height = 21
+        Top = 80
+        Width = 92
+        Caption = 'Zdravstvo(%)'
+        ParentColor = False
+      end
+      object dbePorez: TDBEdit
+        Left = 606
+        Height = 29
+        Top = 106
+        Width = 80
+        DataField = 'porez'
+        DataSource = dsStavke
+        Alignment = taRightJustify
+        CharCase = ecNormal
+        Enabled = False
+        MaxLength = 0
+        TabOrder = 5
+      end
+      object dbePIO: TDBEdit
+        Left = 710
+        Height = 29
+        Top = 106
+        Width = 95
+        DataField = 'PIO'
+        DataSource = dsStavke
+        Alignment = taRightJustify
+        CharCase = ecNormal
+        Enabled = False
+        MaxLength = 0
+        TabOrder = 6
+      end
+      object dbeZdravstvo: TDBEdit
+        Left = 831
+        Height = 29
+        Top = 106
+        Width = 80
+        DataField = 'zdravstvo'
+        DataSource = dsStavke
+        Alignment = taRightJustify
+        CharCase = ecNormal
+        Enabled = False
+        MaxLength = 0
+        TabOrder = 7
+      end
+      object dbePorezDin: TDBEdit
+        Left = 606
+        Height = 29
+        Top = 153
+        Width = 80
+        DataField = 'porezDIN'
+        DataSource = dsStavke
+        Alignment = taRightJustify
+        CharCase = ecNormal
+        Enabled = False
+        MaxLength = 0
+        TabOrder = 8
+      end
+      object dbePIOdin: TDBEdit
+        Left = 710
+        Height = 29
+        Top = 153
+        Width = 95
+        DataField = 'PIOdin'
+        DataSource = dsStavke
+        Alignment = taRightJustify
+        CharCase = ecNormal
+        Enabled = False
+        MaxLength = 0
+        TabOrder = 9
+      end
+      object dbeZdravstvoDin: TDBEdit
+        Left = 831
+        Height = 29
+        Top = 153
+        Width = 80
+        DataField = 'zdravstvoDIN'
+        DataSource = dsStavke
+        Alignment = taRightJustify
+        CharCase = ecNormal
+        Enabled = False
+        MaxLength = 0
+        TabOrder = 10
+      end
+      object ukPorez: TDBEdit
+        Left = 606
+        Height = 29
+        Top = 201
+        Width = 80
+        DataField = 'ukPorezDin'
+        DataSource = dsStavke
+        Alignment = taRightJustify
+        CharCase = ecNormal
+        Enabled = False
+        MaxLength = 0
+        TabOrder = 11
+      end
+      object ukPIO: TDBEdit
+        Left = 709
+        Height = 29
+        Top = 200
+        Width = 96
+        DataField = 'ukPIODin'
+        DataSource = dsStavke
+        Alignment = taRightJustify
+        CharCase = ecNormal
+        Enabled = False
+        MaxLength = 0
+        TabOrder = 12
+      end
+      object ukZdravstvo: TDBEdit
+        Left = 828
+        Height = 29
+        Top = 201
+        Width = 85
+        DataField = 'ukZdravstvoDin'
+        DataSource = dsStavke
+        Alignment = taRightJustify
+        CharCase = ecNormal
+        Enabled = False
+        MaxLength = 0
+        TabOrder = 13
+      end
+      object ukDoprinosi: TDBEdit
+        Left = 932
+        Height = 29
+        Top = 201
+        Width = 116
+        DataField = 'ukDoprinosiDin'
+        DataSource = dsStavke
+        Alignment = taRightJustify
+        CharCase = ecNormal
+        Enabled = False
+        MaxLength = 0
+        TabOrder = 14
+      end
+      object Label22: TLabel
+        Left = 512
+        Height = 21
+        Top = 208
+        Width = 82
+        Caption = 'Za sve dane'
+        ParentColor = False
+      end
+      object Label23: TLabel
+        Left = 506
+        Height = 21
+        Top = 159
+        Width = 89
+        Caption = 'Za jedan dan'
+        ParentColor = False
+      end
+      object Shape1: TShape
+        Left = 511
+        Height = 5
+        Top = 235
+        Width = 537
+      end
+      object dbeNeto: TDBEdit
+        Left = 606
+        Height = 29
+        Top = 249
+        Width = 80
+        DataField = 'neto'
+        DataSource = dsStavke
+        Alignment = taRightJustify
+        CharCase = ecNormal
+        Enabled = False
+        MaxLength = 0
+        TabOrder = 15
+      end
+      object Label24: TLabel
+        Left = 515
+        Height = 21
+        Top = 256
+        Width = 84
+        Caption = 'Neto zarada'
+        ParentColor = False
+      end
+      object Label25: TLabel
+        Left = 707
+        Height = 21
+        Top = 257
+        Width = 109
+        Caption = 'Admin. troskovi'
+        ParentColor = False
+      end
+      object dbeAdmTroskovi: TDBEdit
+        Left = 832
+        Height = 29
+        Top = 249
+        Width = 80
+        DataField = 'troskovi'
+        DataSource = dsStavke
+        Alignment = taRightJustify
+        CharCase = ecNormal
+        Enabled = False
+        MaxLength = 0
+        TabOrder = 16
+      end
+      object dbeTroskoviDin: TDBEdit
+        Left = 932
+        Height = 29
+        Top = 250
+        Width = 116
+        DataField = 'troskoviDIN'
+        DataSource = dsStavke
+        Alignment = taRightJustify
+        CharCase = ecNormal
+        Enabled = False
+        MaxLength = 0
+        TabOrder = 17
+      end
+      object dbeBrutoDin: TDBEdit
+        Left = 933
+        Height = 29
+        Top = 298
+        Width = 115
+        DataField = 'brutoDin'
+        DataSource = dsStavke
+        ReadOnly = True
+        Alignment = taRightJustify
+        CharCase = ecNormal
+        Enabled = False
+        MaxLength = 0
+        TabOrder = 18
+      end
+      object dbeNetoZarada: TDBEdit
+        Left = 935
+        Height = 29
+        Top = 343
+        Width = 113
+        DataField = 'neto'
+        DataSource = dsStavke
+        Alignment = taRightJustify
+        CharCase = ecNormal
+        Enabled = False
+        MaxLength = 0
+        TabOrder = 19
+      end
+      object dbeBrutoZarada: TDBEdit
+        Left = 934
+        Height = 29
+        Top = 385
+        Width = 114
+        DataField = 'brutoZarada'
+        DataSource = dsStavke
+        Alignment = taRightJustify
+        CharCase = ecNormal
+        Enabled = False
+        MaxLength = 0
+        TabOrder = 20
+      end
+      object Label26: TLabel
+        Left = 827
+        Height = 21
+        Top = 343
+        Width = 84
+        Caption = 'Neto zarada'
+        ParentColor = False
+      end
+      object Label28: TLabel
+        Left = 680
+        Height = 21
+        Top = 304
+        Width = 231
+        Caption = 'Porez,doprinosi i admin. troskovi '
+        ParentColor = False
+      end
+      object Label29: TLabel
+        Left = 819
+        Height = 21
+        Top = 385
+        Width = 92
+        Caption = ' Bruto zarada'
+        ParentColor = False
+      end
+      object Label30: TLabel
+        Left = 936
+        Height = 21
+        Top = 175
+        Width = 107
+        Caption = 'Uk. porez i dop.'
+        ParentColor = False
+      end
+    end
+    object Label7: TLabel
+      Left = 596
+      Height = 21
+      Top = 135
+      Width = 39
+      Caption = 'Porez'
+      ParentColor = False
+    end
+    object dbeOsnovicaObracuna2: TDBEdit
+      Left = 760
+      Height = 29
+      Top = 130
+      Width = 78
+      DataField = 'PIO'
+      DataSource = dsZaglavlje
+      Alignment = taRightJustify
+      AutoSize = False
+      CharCase = ecNormal
+      Color = 8454143
+      MaxLength = 0
+      TabOrder = 10
+    end
+    object Label12: TLabel
+      Left = 728
+      Height = 21
+      Top = 135
+      Width = 25
+      Caption = 'PIO'
+      ParentColor = False
+    end
+    object Label13: TLabel
+      Left = 850
+      Height = 21
+      Top = 135
+      Width = 69
+      Caption = 'Zdravstvo'
+      ParentColor = False
+    end
+    object dbeOsnovicaObracuna3: TDBEdit
+      Left = 926
+      Height = 29
+      Top = 130
+      Width = 78
+      DataField = 'zdravstvo'
+      DataSource = dsZaglavlje
+      Alignment = taRightJustify
+      AutoSize = False
+      CharCase = ecNormal
+      Color = 8454143
+      MaxLength = 0
+      TabOrder = 11
+    end
+  end
+  object dbgZaglavlje: TRxDBGrid
+    Left = 0
+    Height = 659
+    Top = 50
+    Width = 216
+    ColumnDefValues.BlobText = '(blob)'
+    TitleButtons = False
+    AutoSort = True
+    Columns = <    
+      item
+        Title.Alignment = taCenter
+        Title.Orientation = toHorizontal
+        Title.Caption = 'rbr'
+        Width = 50
+        FieldName = 'rbr'
+        EditButtons = <>
+        Filter.DropDownRows = 0
+        Filter.EmptyValue = '(Empty)'
+        Filter.NotEmptyValue = '(Not empty)'
+        Filter.AllValue = '(All values)'
+        Filter.EmptyFont.Style = [fsItalic]
+        Filter.ItemIndex = -1
+        Footers = <>
+      end    
+      item
+        Title.Alignment = taCenter
+        Title.Orientation = toHorizontal
+        Title.Caption = 'datum'
+        Width = 120
+        FieldName = 'datum'
+        EditButtons = <>
+        Filter.DropDownRows = 0
+        Filter.EmptyValue = '(Empty)'
+        Filter.NotEmptyValue = '(Not empty)'
+        Filter.AllValue = '(All values)'
+        Filter.EmptyFont.Style = [fsItalic]
+        Filter.ItemIndex = -1
+        Footers = <>
+      end>
+    KeyStrokes = <    
+      item
+        Command = rxgcShowFindDlg
+        ShortCut = 16454
+        Enabled = True
+      end    
+      item
+        Command = rxgcShowColumnsDlg
+        ShortCut = 16471
+        Enabled = True
+      end    
+      item
+        Command = rxgcShowFilterDlg
+        ShortCut = 16468
+        Enabled = True
+      end    
+      item
+        Command = rxgcShowSortDlg
+        ShortCut = 16467
+        Enabled = True
+      end    
+      item
+        Command = rxgcShowQuickFilter
+        ShortCut = 16465
+        Enabled = True
+      end    
+      item
+        Command = rxgcHideQuickFilter
+        ShortCut = 16456
+        Enabled = True
+      end    
+      item
+        Command = rxgcSelectAll
+        ShortCut = 16449
+        Enabled = True
+      end    
+      item
+        Command = rxgcDeSelectAll
+        ShortCut = 16429
+        Enabled = True
+      end    
+      item
+        Command = rxgcInvertSelection
+        ShortCut = 16426
+        Enabled = True
+      end    
+      item
+        Command = rxgcOptimizeColumnsWidth
+        ShortCut = 16427
+        Enabled = True
+      end    
+      item
+        Command = rxgcCopyCellValue
+        ShortCut = 16451
+        Enabled = True
+      end>
+    FooterOptions.DrawFullLine = False
+    SearchOptions.QuickSearchOptions = [loCaseInsensitive, loPartialKey]
+    SearchOptions.FromStart = False
+    OptionsRx = [rdgAllowColumnsForm, rdgAllowDialogFind, rdgAllowQuickFilter]
+    Align = alLeft
+    Color = 14342874
+    DrawFullLine = False
+    FocusColor = clRed
+    SelectedColor = clHighlight
+    GridLineStyle = psSolid
+    DataSource = dsZaglavlje
+    Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+    TabOrder = 3
+    TitleFont.CharSet = ANSI_CHARSET
+    TitleFont.Color = clBlack
+    TitleFont.Height = -16
+    TitleFont.Name = 'Segoe UI'
+    TitleFont.Pitch = fpVariable
+    TitleFont.Quality = fqDraft
+  end
+  object dbeOsnovicaObracuna1: TDBEdit
+    Left = 856
+    Height = 29
+    Top = 178
+    Width = 78
+    DataField = 'Porez'
+    DataSource = dsZaglavlje
+    Alignment = taRightJustify
+    AutoSize = False
+    CharCase = ecNormal
+    Color = 8454143
+    MaxLength = 0
+    TabOrder = 4
+  end
+  object Label16: TLabel
+    Left = 256
+    Height = 21
+    Top = 16
+    Width = 58
+    Caption = 'Do dana'
+    ParentColor = False
+  end
+  object Label27: TLabel
+    Left = 11
+    Height = 21
+    Top = 176
+    Width = 104
+    Caption = 'Zdravstvo ( % )'
+    ParentColor = False
+  end
+  object qZaglavlje: TZQuery
+    Connection = fMain.conn
+    AfterScroll = qZaglavljeAfterScroll
+    UpdateObject = usqlZaglavlje
+    CachedUpdates = True
+    OnNewRecord = qZaglavljeNewRecord
+    SQL.Strings = (
+      'select * from zaglavlje'
+      'order by rbr DESC'
+    )
+    Params = <>
+    left = 49
+    top = 117
+    object qZaglavljerbr: TLongintField
+      FieldKind = fkData
+      FieldName = 'rbr'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qZaglavljedatum: TDateTimeField
+      FieldKind = fkData
+      FieldName = 'datum'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = 'dd.MM.yyyy'
+    end
+    object qZaglavljefirma: TLongintField
+      FieldKind = fkData
+      FieldName = 'firma'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qZaglavljedatumPocetka: TDateTimeField
+      FieldKind = fkData
+      FieldName = 'datumPocetka'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qZaglavljedatumZavrsetka: TDateTimeField
+      FieldKind = fkData
+      FieldName = 'datumZavrsetka'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qZaglavljemestoIzdavanja: TStringField
+      FieldKind = fkData
+      FieldName = 'mestoIzdavanja'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 100
+    end
+    object qZaglavljedatumIzdavanja: TDateTimeField
+      FieldKind = fkData
+      FieldName = 'datumIzdavanja'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qZaglavljeopisRadova: TStringField
+      FieldKind = fkData
+      FieldName = 'opisRadova'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 400
+    end
+    object qZaglavljeprocenatZadruge: TCurrencyField
+      FieldKind = fkData
+      FieldName = 'procenatZadruge'
+      Index = 8
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '#,##0.00'
+      MaxValue = 0
+      MinValue = 0
+      Precision = 2
+    end
+    object qZaglavljerecNo: TLongintField
+      FieldKind = fkData
+      FieldName = 'recNo'
+      Index = 9
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qZaglavljeosnovicaObracuna: TCurrencyField
+      FieldKind = fkData
+      FieldName = 'osnovicaObracuna'
+      Index = 10
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '#,##0.00'
+      MaxValue = 0
+      MinValue = 0
+      Precision = 2
+    end
+    object qZaglavljePorez: TCurrencyField
+      FieldKind = fkData
+      FieldName = 'Porez'
+      Index = 11
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '#,##0.00'
+      MaxValue = 0
+      MinValue = 0
+      Precision = 2
+    end
+    object qZaglavljePIO: TCurrencyField
+      FieldKind = fkData
+      FieldName = 'PIO'
+      Index = 12
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '#,##0.00'
+      MaxValue = 0
+      MinValue = 0
+      Precision = 2
+    end
+    object qZaglavljezdravstvo: TCurrencyField
+      FieldKind = fkData
+      FieldName = 'zdravstvo'
+      Index = 13
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '#,##0.00'
+      MaxValue = 0
+      MinValue = 0
+      Precision = 2
+    end
+    object qZaglavljesifraPosla: TStringField
+      FieldKind = fkData
+      FieldName = 'sifraPosla'
+      Index = 14
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 40
+    end
+  end
+  object usqlZaglavlje: TZUpdateSQL
+    DeleteSQL.Strings = (
+      'DELETE FROM zaglavlje'
+      'WHERE'
+      '  ((zaglavlje.rbr IS NULL AND :OLD_rbr IS NULL) OR (zaglavlje.rbr = :OLD_rbr))'
+    )
+    InsertSQL.Strings = (
+      'INSERT INTO zaglavlje'
+      '  (rbr, datum, firma, datumPocetka, datumZavrsetka, mestoIzdavanja, datumIzdavanja, '
+      '   opisRadova, procenatZadruge, osnovicaObracuna, Porez, PIO, zdravstvo, '
+      '   sifraPosla)'
+      'VALUES'
+      '  (:rbr, :datum, :firma, :datumPocetka, :datumZavrsetka, :mestoIzdavanja, '
+      '   :datumIzdavanja, :opisRadova, :procenatZadruge, :osnovicaObracuna, :Porez, '
+      '   :PIO, :zdravstvo, :sifraPosla)'
+    )
+    ModifySQL.Strings = (
+      'UPDATE zaglavlje SET'
+      '  rbr = :rbr,'
+      '  datum = :datum,'
+      '  firma = :firma,'
+      '  datumPocetka = :datumPocetka,'
+      '  datumZavrsetka = :datumZavrsetka,'
+      '  mestoIzdavanja = :mestoIzdavanja,'
+      '  datumIzdavanja = :datumIzdavanja,'
+      '  opisRadova = :opisRadova,'
+      '  procenatZadruge = :procenatZadruge,'
+      '  osnovicaObracuna = :osnovicaObracuna,'
+      '  Porez = :Porez,'
+      '  PIO = :PIO,'
+      '  zdravstvo = :zdravstvo,'
+      '  sifraPosla = :sifraPosla'
+      'WHERE'
+      '  ((zaglavlje.rbr IS NULL AND :OLD_rbr IS NULL) OR (zaglavlje.rbr = :OLD_rbr))'
+    )
+    UseSequenceFieldForRefreshSQL = False
+    left = 120
+    top = 117
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'rbr'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'datum'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'firma'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'datumPocetka'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'datumZavrsetka'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'mestoIzdavanja'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'datumIzdavanja'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'opisRadova'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'procenatZadruge'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'osnovicaObracuna'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'Porez'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'PIO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'zdravstvo'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'sifraPosla'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_rbr'
+        ParamType = ptUnknown
+      end>
+  end
+  object dsZaglavlje: TDataSource
+    DataSet = qZaglavlje
+    left = 194
+    top = 118
+  end
+  object dsFirme: TDataSource
+    DataSet = qFirme
+    left = 189
+    top = 190
+  end
+  object qFirme: TZReadOnlyQuery
+    Connection = fMain.conn
+    SQL.Strings = (
+      'select * from firme '
+      'order by naziv'
+    )
+    Params = <>
+    left = 120
+    top = 188
+    object qFirmesifra: TLongintField
+      FieldKind = fkData
+      FieldName = 'sifra'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+    end
+    object qFirmenaziv: TStringField
+      FieldKind = fkData
+      FieldName = 'naziv'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      Size = 200
+    end
+    object qFirmeulica: TStringField
+      FieldKind = fkData
+      FieldName = 'ulica'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      Size = 120
+    end
+    object qFirmebroj: TStringField
+      FieldKind = fkData
+      FieldName = 'broj'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      Size = 40
+    end
+    object qFirmemesto: TLongintField
+      FieldKind = fkData
+      FieldName = 'mesto'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+    end
+    object qFirmetel: TStringField
+      FieldKind = fkData
+      FieldName = 'tel'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      Size = 80
+    end
+    object qFirmefax: TStringField
+      FieldKind = fkData
+      FieldName = 'fax'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      Size = 80
+    end
+    object qFirmekontakt: TStringField
+      FieldKind = fkData
+      FieldName = 'kontakt'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      Size = 400
+    end
+    object qFirmebanka: TLongintField
+      FieldKind = fkData
+      FieldName = 'banka'
+      Index = 8
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+    end
+    object qFirmePIB: TStringField
+      FieldKind = fkData
+      FieldName = 'PIB'
+      Index = 9
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      Size = 80
+    end
+    object qFirmematBroj: TStringField
+      FieldKind = fkData
+      FieldName = 'matBroj'
+      Index = 10
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      Size = 80
+    end
+    object qFirmeRecNo: TLongintField
+      FieldKind = fkData
+      FieldName = 'RecNo'
+      Index = 11
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+    end
+    object qFirmenazivMesta: TStringField
+      FieldKind = fkData
+      FieldName = 'nazivMesta'
+      Index = 12
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      Size = 100
+    end
+    object qFirmenazivBanke: TStringField
+      FieldKind = fkData
+      FieldName = 'nazivBanke'
+      Index = 13
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      Size = 100
+    end
+  end
+  object usqlStavke: TZUpdateSQL
+    DeleteSQL.Strings = (
+      'DELETE FROM stavke'
+      'WHERE'
+      '  ((stavke.rowid IS NULL AND :OLD_rowid IS NULL) OR (stavke.rowid = :OLD_rowid))'
+    )
+    InsertSQL.Strings = (
+      'INSERT INTO stavke'
+      '  (rbr, radnik, neto, sati, odDana, doDana, smena, sifraPosla, osnovica, '
+      '   PIO, troskovi, zdravstvo, PIOdin, porez, porezDIN, zdravstvoDIN, troskoviDIN)'
+      'VALUES'
+      '  (:rbr, :radnik, :neto, :sati, :odDana, :doDana, :smena, :sifraPosla, '
+      '   :osnovica, :PIO, :troskovi, :zdravstvo, :PIOdin, :porez, :porezDIN, '
+      '   :zdravstvoDIN, :troskoviDIN)'
+    )
+    ModifySQL.Strings = (
+      'UPDATE stavke SET'
+      '  rbr = :rbr,'
+      '  radnik = :radnik,'
+      '  neto = :neto,'
+      '  sati = :sati,'
+      '  odDana = :odDana,'
+      '  doDana = :doDana,'
+      '  smena = :smena,'
+      '  sifraPosla = :sifraPosla,'
+      '  osnovica = :osnovica,'
+      '  PIO = :PIO,'
+      '  troskovi = :troskovi,'
+      '  zdravstvo = :zdravstvo,'
+      '  PIOdin = :PIOdin,'
+      '  porez = :porez,'
+      '  porezDIN = :porezDIN,'
+      '  zdravstvoDIN = :zdravstvoDIN,'
+      '  troskoviDIN = :troskoviDIN'
+      'WHERE'
+      '  ((stavke.rowid IS NULL AND :OLD_rowid IS NULL) OR (stavke.rowid = :OLD_rowid))'
+    )
+    UseSequenceFieldForRefreshSQL = False
+    left = 472
+    top = 359
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'rbr'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'radnik'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'neto'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'sati'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'odDana'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'doDana'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'smena'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'sifraPosla'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'osnovica'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'PIO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'troskovi'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'zdravstvo'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'PIOdin'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'porez'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'porezDIN'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'zdravstvoDIN'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'troskoviDIN'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_rowid'
+        ParamType = ptUnknown
+      end>
+  end
+  object dsStavke: TDataSource
+    DataSet = qStavke
+    left = 313
+    top = 359
+  end
+  object dsRadnici: TDataSource
+    DataSet = qRadnici
+    left = 310
+    top = 427
+  end
+  object qRadnici: TZReadOnlyQuery
+    Connection = fMain.conn
+    OnCalcFields = qRadniciCalcFields
+    SQL.Strings = (
+      'select r.*,d.nazivDrzave,o.nazivOpstine'
+      'from radnici  r '
+      '     left join sifarnikdrzava d on (r.sifradrzave=d.sifrraDrzave)'
+      #9' left JOIN opstine o on (r.sifraopstine=o.sifra)'
+      'order by imePrezime'
+    )
+    Params = <>
+    left = 384
+    top = 427
+    object qRadnicisifra: TLargeintField
+      FieldKind = fkData
+      FieldName = 'sifra'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+    end
+    object qRadniciprezime: TStringField
+      FieldKind = fkData
+      FieldName = 'prezime'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      Size = 80
+    end
+    object qRadniciime: TStringField
+      FieldKind = fkData
+      FieldName = 'ime'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      Size = 80
+    end
+    object qRadniciimeroditelja: TStringField
+      FieldKind = fkData
+      FieldName = 'imeroditelja'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      Size = 80
+    end
+    object qRadniciulica: TStringField
+      FieldKind = fkData
+      FieldName = 'ulica'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      Size = 80
+    end
+    object qRadnicibroj: TStringField
+      FieldKind = fkData
+      FieldName = 'broj'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      Size = 40
+    end
+    object qRadnicitel: TStringField
+      FieldKind = fkData
+      FieldName = 'tel'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      Size = 80
+    end
+    object qRadnicimesto: TStringField
+      FieldKind = fkData
+      FieldName = 'mesto'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      Size = 80
+    end
+    object qRadnicipol: TStringField
+      FieldKind = fkData
+      FieldName = 'pol'
+      Index = 8
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      Size = 40
+    end
+    object qRadnicisifraOpstine: TStringField
+      FieldKind = fkData
+      FieldName = 'sifraOpstine'
+      Index = 9
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      Size = 12
+    end
+    object qRadnicisifraDrzave: TStringField
+      FieldKind = fkData
+      FieldName = 'sifraDrzave'
+      Index = 10
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      Size = 12
+    end
+    object qRadnicijmbg: TStringField
+      FieldKind = fkData
+      FieldName = 'jmbg'
+      Index = 11
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      Size = 52
+    end
+    object qRadniciimePrezime: TStringField
+      FieldKind = fkData
+      FieldName = 'imePrezime'
+      Index = 12
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      Size = 200
+    end
+  end
+  object qParametri: TZReadOnlyQuery
+    Connection = fMain.conn
+    SQL.Strings = (
+      'select * from parametri'
+    )
+    Params = <>
+    left = 384
+    top = 248
+    object qParametriosnovica: TFloatField
+      FieldKind = fkData
+      FieldName = 'osnovica'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      DisplayFormat = '#,##0.00'
+      MaxValue = 0
+      MinValue = 0
+      Precision = 10
+    end
+    object qParametriporez: TFloatField
+      FieldKind = fkData
+      FieldName = 'porez'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      DisplayFormat = '#,##0.00'
+      MaxValue = 0
+      MinValue = 0
+      Precision = 10
+    end
+    object qParametriPIO: TFloatField
+      FieldKind = fkData
+      FieldName = 'PIO'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      DisplayFormat = '#,##0.00'
+      MaxValue = 0
+      MinValue = 0
+      Precision = 10
+    end
+    object qParametrizdravstvo: TFloatField
+      FieldKind = fkData
+      FieldName = 'zdravstvo'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      DisplayFormat = '#,##0.00'
+      MaxValue = 0
+      MinValue = 0
+      Precision = 10
+    end
+    object qParametriadminTroskovi: TFloatField
+      FieldKind = fkData
+      FieldName = 'adminTroskovi'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      MaxValue = 0
+      MinValue = 0
+      Precision = 10
+    end
+  end
+  object dsParametri: TDataSource
+    DataSet = qParametri
+    left = 313
+    top = 248
+  end
+  object qPoslovi: TZReadOnlyQuery
+    Connection = fMain.conn
+    Filtered = True
+    SQL.Strings = (
+      'select * from sifarnikPoslova'
+      'order by sifra'
+    )
+    Params = <>
+    left = 380
+    top = 504
+    object qPoslovisifra: TStringField
+      FieldKind = fkData
+      FieldName = 'sifra'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      Size = 40
+    end
+    object qPosloviopisPosla: TStringField
+      FieldKind = fkData
+      FieldName = 'opisPosla'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      Size = 200
+    end
+  end
+  object dsPoslovi: TDataSource
+    DataSet = qPoslovi
+    left = 313
+    top = 504
+  end
+  object dsSumaNeto: TDataSource
+    DataSet = qSumaNeto
+    left = 311
+    top = 566
+  end
+  object qSumaNeto: TZQuery
+    Connection = fMain.conn
+    CachedUpdates = True
+    SQL.Strings = (
+      'select total(neto) as netoSuma'
+      ' from stavke'
+      'where rbr=:rbr'
+    )
+    Params = <    
+      item
+        DataType = ftInteger
+        Name = 'rbr'
+        ParamType = ptInput
+      end>
+    left = 381
+    top = 565
+    ParamData = <    
+      item
+        DataType = ftInteger
+        Name = 'rbr'
+        ParamType = ptInput
+      end>
+    object qSumaNetonetoSuma: TFloatField
+      FieldKind = fkData
+      FieldName = 'netoSuma'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      DisplayFormat = '#,##0.00'
+      MaxValue = 0
+      MinValue = 0
+      Precision = 2
+    end
+  end
+  object usqlSumaNeto: TZUpdateSQL
+    UseSequenceFieldForRefreshSQL = False
+    left = 467
+    top = 561
+  end
+  object ZQuery1: TZQuery
+    Connection = fMain.conn
+    SQL.Strings = (
+      'select s.*'
+      '        ,s.rowId '
+      '        ,r.pol  '
+      '       ,r.JMBG'
+      '       ,r.sifraOpstine'
+      '       ,r.sifraDrzave'
+      '       ,r.tel'
+      '      ,r.sifraOpstine'
+      '     ,r.sifraDrzave'
+      '     ,r.ime'
+      '     ,r.prezime'
+      '     ,r.Imeroditelja'
+      ' from stavke s left join radnici r on ( s.radnik=r.sifra)'
+      'where s.rbr=1'
+      ''
+    )
+    Params = <>
+    left = 480
+    top = 248
+    object ZQuery1rbr: TLongintField
+      FieldKind = fkData
+      FieldName = 'rbr'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+    end
+    object ZQuery1radnik: TLongintField
+      FieldKind = fkData
+      FieldName = 'radnik'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+    end
+    object ZQuery1neto: TFloatField
+      FieldKind = fkData
+      FieldName = 'neto'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      MaxValue = 0
+      MinValue = 0
+      Precision = 12
+    end
+    object ZQuery1sati: TCurrencyField
+      FieldKind = fkData
+      FieldName = 'sati'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      MaxValue = 0
+      MinValue = 0
+      Precision = 2
+    end
+    object ZQuery1recNo: TLongintField
+      FieldKind = fkData
+      FieldName = 'recNo'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+    end
+    object ZQuery1odDana: TDateTimeField
+      FieldKind = fkData
+      FieldName = 'odDana'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+    end
+    object ZQuery1doDana: TDateTimeField
+      FieldKind = fkData
+      FieldName = 'doDana'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+    end
+    object ZQuery1smena: TLongintField
+      FieldKind = fkData
+      FieldName = 'smena'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+    end
+    object ZQuery1sifraPosla: TStringField
+      FieldKind = fkData
+      FieldName = 'sifraPosla'
+      Index = 8
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      Size = 40
+    end
+    object ZQuery1osnovica: TFloatField
+      FieldKind = fkData
+      FieldName = 'osnovica'
+      Index = 9
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      MaxValue = 0
+      MinValue = 0
+      Precision = 12
+    end
+    object ZQuery1PIO: TFloatField
+      FieldKind = fkData
+      FieldName = 'PIO'
+      Index = 10
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      MaxValue = 0
+      MinValue = 0
+      Precision = 12
+    end
+    object ZQuery1troskovi: TFloatField
+      FieldKind = fkData
+      FieldName = 'troskovi'
+      Index = 11
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      MaxValue = 0
+      MinValue = 0
+      Precision = 12
+    end
+    object ZQuery1zdravstvo: TFloatField
+      FieldKind = fkData
+      FieldName = 'zdravstvo'
+      Index = 12
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      MaxValue = 0
+      MinValue = 0
+      Precision = 12
+    end
+    object ZQuery1PIOdin: TFloatField
+      FieldKind = fkData
+      FieldName = 'PIOdin'
+      Index = 13
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      MaxValue = 0
+      MinValue = 0
+      Precision = 12
+    end
+    object ZQuery1porez: TFloatField
+      FieldKind = fkData
+      FieldName = 'porez'
+      Index = 14
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      MaxValue = 0
+      MinValue = 0
+      Precision = 12
+    end
+    object ZQuery1porezDIN: TFloatField
+      FieldKind = fkData
+      FieldName = 'porezDIN'
+      Index = 15
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      MaxValue = 0
+      MinValue = 0
+      Precision = 12
+    end
+    object ZQuery1zdravstvoDIN: TFloatField
+      FieldKind = fkData
+      FieldName = 'zdravstvoDIN'
+      Index = 16
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      MaxValue = 0
+      MinValue = 0
+      Precision = 12
+    end
+    object ZQuery1troskoviDIN: TFloatField
+      FieldKind = fkData
+      FieldName = 'troskoviDIN'
+      Index = 17
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      MaxValue = 0
+      MinValue = 0
+      Precision = 12
+    end
+    object ZQuery1rowid: TLargeintField
+      FieldKind = fkData
+      FieldName = 'rowid'
+      Index = 18
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+    end
+    object ZQuery1pol: TStringField
+      FieldKind = fkData
+      FieldName = 'pol'
+      Index = 19
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      Size = 40
+    end
+    object ZQuery1jmbg: TStringField
+      FieldKind = fkData
+      FieldName = 'jmbg'
+      Index = 20
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      Size = 52
+    end
+    object ZQuery1sifraOpstine: TStringField
+      FieldKind = fkData
+      FieldName = 'sifraOpstine'
+      Index = 21
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      Size = 12
+    end
+    object ZQuery1sifraDrzave: TStringField
+      FieldKind = fkData
+      FieldName = 'sifraDrzave'
+      Index = 22
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      Size = 12
+    end
+    object ZQuery1tel: TStringField
+      FieldKind = fkData
+      FieldName = 'tel'
+      Index = 23
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      Size = 80
+    end
+    object ZQuery1sifraOpstine_1: TStringField
+      FieldKind = fkData
+      FieldName = 'sifraOpstine_1'
+      Index = 24
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      Size = 12
+    end
+    object ZQuery1sifraDrzave_1: TStringField
+      FieldKind = fkData
+      FieldName = 'sifraDrzave_1'
+      Index = 25
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      Size = 12
+    end
+    object ZQuery1ime: TStringField
+      FieldKind = fkData
+      FieldName = 'ime'
+      Index = 26
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      Size = 80
+    end
+    object ZQuery1prezime: TStringField
+      FieldKind = fkData
+      FieldName = 'prezime'
+      Index = 27
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      Size = 80
+    end
+    object ZQuery1imeroditelja: TStringField
+      FieldKind = fkData
+      FieldName = 'imeroditelja'
+      Index = 28
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      Size = 80
+    end
+  end
+  object qStavke: TZQuery
+    Connection = fMain.conn
+    BeforeOpen = qStavkeBeforeOpen
+    AfterOpen = qStavkeAfterOpen
+    OnCalcFields = qStavkeCalcFields
+    UpdateObject = usqlStavke
+    CachedUpdates = True
+    OnNewRecord = qStavkeNewRecord
+    SQL.Strings = (
+      'select s.*,s.rowid, r.jmbg, r.sifraOpstine,r.sifraDrzave, r.tel,r.imeRoditelja,'
+      '  r.ime , r.prezime,r.pol'
+      ' from stavke s left join radnici r  on(r.sifra=s.radnik)'
+      'where s.rbr=:rbr'
+    )
+    Params = <    
+      item
+        DataType = ftInteger
+        Name = 'rbr'
+        ParamType = ptInput
+      end>
+    UpdateMode = umUpdateAll
+    left = 384
+    top = 359
+    ParamData = <    
+      item
+        DataType = ftInteger
+        Name = 'rbr'
+        ParamType = ptInput
+      end>
+    object qStavkerbr: TLongintField
+      FieldKind = fkData
+      FieldName = 'rbr'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qStavkeradnik: TLongintField
+      FieldKind = fkData
+      FieldName = 'radnik'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qStavkeneto: TFloatField
+      FieldKind = fkData
+      FieldName = 'neto'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '#,##0.00'
+      MaxValue = 0
+      MinValue = 0
+      Precision = 12
+    end
+    object qStavkesati: TCurrencyField
+      FieldKind = fkData
+      FieldName = 'sati'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '#,##0.00'
+      MaxValue = 0
+      MinValue = 0
+      Precision = 2
+    end
+    object qStavkerecNo: TLongintField
+      FieldKind = fkData
+      FieldName = 'recNo'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qStavkeodDana: TDateTimeField
+      FieldKind = fkData
+      FieldName = 'odDana'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qStavkedoDana: TDateTimeField
+      FieldKind = fkData
+      FieldName = 'doDana'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qStavkesmena: TLongintField
+      FieldKind = fkData
+      FieldName = 'smena'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qStavkesifraPosla: TStringField
+      FieldKind = fkData
+      FieldName = 'sifraPosla'
+      Index = 8
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 40
+    end
+    object qStavkeosnovica: TFloatField
+      FieldKind = fkData
+      FieldName = 'osnovica'
+      Index = 9
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '#,##0.00'
+      MaxValue = 0
+      MinValue = 0
+      Precision = 12
+    end
+    object qStavkePIO: TFloatField
+      FieldKind = fkData
+      FieldName = 'PIO'
+      Index = 10
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '#,##0.00'
+      MaxValue = 0
+      MinValue = 0
+      Precision = 12
+    end
+    object qStavketroskovi: TFloatField
+      FieldKind = fkData
+      FieldName = 'troskovi'
+      Index = 11
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '#,##0.00'
+      MaxValue = 0
+      MinValue = 0
+      Precision = 12
+    end
+    object qStavkezdravstvo: TFloatField
+      FieldKind = fkData
+      FieldName = 'zdravstvo'
+      Index = 12
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '#,##0.00'
+      MaxValue = 0
+      MinValue = 0
+      Precision = 12
+    end
+    object qStavkePIOdin: TFloatField
+      FieldKind = fkData
+      FieldName = 'PIOdin'
+      Index = 13
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '#,##0.00'
+      MaxValue = 0
+      MinValue = 0
+      Precision = 12
+    end
+    object qStavkeporez: TFloatField
+      FieldKind = fkData
+      FieldName = 'porez'
+      Index = 14
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '#,##0.00'
+      MaxValue = 0
+      MinValue = 0
+      Precision = 12
+    end
+    object qStavkeporezDIN: TFloatField
+      FieldKind = fkData
+      FieldName = 'porezDIN'
+      Index = 15
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '#,##0.00'
+      MaxValue = 0
+      MinValue = 0
+      Precision = 12
+    end
+    object qStavkezdravstvoDIN: TFloatField
+      FieldKind = fkData
+      FieldName = 'zdravstvoDIN'
+      Index = 16
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '#,##0.00'
+      MaxValue = 0
+      MinValue = 0
+      Precision = 12
+    end
+    object qStavketroskoviDIN: TFloatField
+      FieldKind = fkData
+      FieldName = 'troskoviDIN'
+      Index = 17
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '#,##0.00'
+      MaxValue = 0
+      MinValue = 0
+      Precision = 12
+    end
+    object qStavkerowid: TLargeintField
+      FieldKind = fkData
+      FieldName = 'rowid'
+      Index = 18
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+    end
+    object qStavkejmbg: TStringField
+      FieldKind = fkData
+      FieldName = 'jmbg'
+      Index = 19
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 52
+    end
+    object qStavkesifraOpstine: TStringField
+      FieldKind = fkData
+      FieldName = 'sifraOpstine'
+      Index = 20
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 12
+    end
+    object qStavkesifraDrzave: TStringField
+      FieldKind = fkData
+      FieldName = 'sifraDrzave'
+      Index = 21
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 12
+    end
+    object qStavketel: TStringField
+      FieldKind = fkData
+      FieldName = 'tel'
+      Index = 22
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 80
+    end
+    object qStavkeime: TStringField
+      FieldKind = fkData
+      FieldName = 'ime'
+      Index = 23
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 80
+    end
+    object qStavkeprezime: TStringField
+      FieldKind = fkData
+      FieldName = 'prezime'
+      Index = 24
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 80
+    end
+    object qStavkepol: TStringField
+      FieldKind = fkData
+      FieldName = 'pol'
+      Index = 25
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 40
+    end
+    object StringField1: TStringField
+      FieldKind = fkLookup
+      FieldName = 'imePrezime'
+      Index = 26
+      KeyFields = 'radnik'
+      LookupCache = False
+      LookupDataSet = qRadnici
+      LookupKeyFields = 'sifra'
+      LookupResultField = 'imePrezime'
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 200
+    end
+    object qStavkeukPorezDin: TCurrencyField
+      FieldKind = fkCalculated
+      FieldName = 'ukPorezDin'
+      Index = 27
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '#,##0.00'
+      MaxValue = 0
+      MinValue = 0
+    end
+    object qStavkeukPIODin: TCurrencyField
+      FieldKind = fkCalculated
+      FieldName = 'ukPIODin'
+      Index = 28
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '#,##0.00'
+      MaxValue = 0
+      MinValue = 0
+    end
+    object qStavkeukZdravstvoDin: TCurrencyField
+      FieldKind = fkCalculated
+      FieldName = 'ukZdravstvoDin'
+      Index = 29
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '#,##0.00'
+      MaxValue = 0
+      MinValue = 0
+    end
+    object qStavkeukDoprinosiDin: TCurrencyField
+      FieldKind = fkCalculated
+      FieldName = 'ukDoprinosiDin'
+      Index = 30
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '#,##0.00'
+      MaxValue = 0
+      MinValue = 0
+    end
+    object qStavketroskoviDIN1: TCurrencyField
+      FieldKind = fkCalculated
+      FieldName = 'troskoviDIN1'
+      Index = 31
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      MaxValue = 0
+      MinValue = 0
+    end
+    object qStavkebrutoDin: TCurrencyField
+      FieldKind = fkCalculated
+      FieldName = 'brutoDin'
+      Index = 32
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '#,##0.00'
+      MaxValue = 0
+      MinValue = 0
+    end
+    object qStavkebrutoZarada: TCurrencyField
+      FieldKind = fkCalculated
+      FieldName = 'brutoZarada'
+      Index = 33
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '#,##0.00'
+      MaxValue = 0
+      MinValue = 0
+    end
+    object qStavkeimeroditelja: TStringField
+      FieldKind = fkData
+      FieldName = 'imeroditelja'
+      Index = 34
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      Size = 80
+    end
+  end
+  object qConfig: TZQuery
+    Connection = fMain.conn
+    UpdateObject = usqlConfig
+    CachedUpdates = True
+    SQL.Strings = (
+      'select *'
+      'from config'
+    )
+    Params = <>
+    left = 118
+    top = 271
+    object qConfignaziv: TStringField
+      FieldKind = fkData
+      FieldName = 'naziv'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      Size = 200
+    end
+    object qConfigadresa: TStringField
+      FieldKind = fkData
+      FieldName = 'adresa'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      Size = 200
+    end
+    object qConfigmesto: TStringField
+      FieldKind = fkData
+      FieldName = 'mesto'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      Size = 200
+    end
+    object qConfigPIB: TStringField
+      FieldKind = fkData
+      FieldName = 'PIB'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      Size = 80
+    end
+    object qConfigtekuci: TStringField
+      FieldKind = fkData
+      FieldName = 'tekuci'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      Size = 120
+    end
+    object qConfigbanka: TStringField
+      FieldKind = fkData
+      FieldName = 'banka'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      Size = 120
+    end
+    object qConfigrecNo: TLongintField
+      FieldKind = fkData
+      FieldName = 'recNo'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+    end
+  end
+  object usqlConfig: TZUpdateSQL
+    UseSequenceFieldForRefreshSQL = False
+    left = 49
+    top = 270
+  end
+  object dsConfig: TDataSource
+    DataSet = qConfig
+    left = 185
+    top = 272
+  end
+  object rptLista: TfrReport
+    Dataset = dsLista
+    InitialZoom = pzDefault
+    Options = []
+    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit]
+    DataType = dtDataSet
+    left = 686
+    top = 514
+  end
+  object dsLista: TfrDBDataSet
+    DataSet = qStavke
+    left = 747
+    top = 512
+  end
+  object rptDesigner: TfrDesigner
+    left = 807
+    top = 513
+  end
+  object rptFaktura: TfrReport
+    Dataset = dsLista
+    InitialZoom = pzOnePage
+    Options = []
+    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit]
+    DataType = dtDataSet
+    left = 686
+    top = 574
+  end
+  object rptPojedinacno: TfrReport
+    InitialZoom = pzDefault
+    Options = []
+    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit]
+    DataType = dtDataSet
+    left = 684
+    top = 634
+  end
+  object sDialog: TSaveDialog
+    DefaultExt = '.xml'
+    FileName = 'sezonci'
+    InitialDir = '.\'
+    left = 807
+    top = 634
+  end
+end

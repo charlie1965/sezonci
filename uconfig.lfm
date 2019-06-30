@@ -1,0 +1,566 @@
+object fConfig: TfConfig
+  Left = 272
+  Height = 430
+  Top = 193
+  Width = 693
+  Caption = 'NASI PODACI'
+  ClientHeight = 430
+  ClientWidth = 693
+  Font.CharSet = ANSI_CHARSET
+  Font.Color = clBlack
+  Font.Height = -16
+  Font.Name = 'Segoe UI'
+  Font.Pitch = fpVariable
+  Font.Quality = fqDraft
+  OnCreate = FormCreate
+  Position = poScreenCenter
+  LCLVersion = '2.0.2.0'
+  object cyAdvPanel1: TcyAdvPanel
+    Left = 0
+    Height = 50
+    Top = 0
+    Width = 693
+    Wallpaper.Transparent = False
+    Align = alTop
+    TabOrder = 0
+    Bevels = <    
+      item
+      end>
+    Degrade.FromColor = clTeal
+    Degrade.SpeedPercent = 100
+    Degrade.ToColor = clBtnFace
+  end
+  object cyAdvPanel2: TcyAdvPanel
+    Left = 0
+    Height = 50
+    Top = 380
+    Width = 693
+    Wallpaper.Transparent = False
+    Align = alBottom
+    TabOrder = 1
+    Bevels = <    
+      item
+      end>
+    Degrade.FromColor = clWhite
+    Degrade.SpeedPercent = 100
+    Degrade.ToColor = clTeal
+    object cyAdvButton1: TcyAdvButton
+      Left = 147
+      Height = 30
+      Top = 12
+      Width = 75
+      Caption = 'Zapamti'
+      OnClick = cyAdvButton1Click
+      TabOrder = 0
+      BordersNormal = <      
+        item
+          HighlightColor = clNavy
+          ShadowColor = clNavy
+        end>
+      BordersHot = <      
+        item
+          HighlightColor = clAqua
+          ShadowColor = clBlue
+        end>
+      BordersDown = <      
+        item
+          HighlightColor = clBlue
+          ShadowColor = clAqua
+        end>
+      BordersDisabled = <      
+        item
+          HighlightColor = clMaroon
+          ShadowColor = clMaroon
+        end>
+      ButtonNormal.Degrade.FromColor = clAqua
+      ButtonNormal.Degrade.SpeedPercent = 90
+      ButtonNormal.Degrade.ToColor = clBlue
+      ButtonNormal.Wallpaper.Transparent = False
+      ButtonHot.Degrade.BalanceMode = bmReverseFromColor
+      ButtonHot.Degrade.FromColor = clAqua
+      ButtonHot.Degrade.SpeedPercent = 100
+      ButtonHot.Degrade.ToColor = clBlue
+      ButtonHot.Wallpaper.Transparent = False
+      ButtonDown.Degrade.FromColor = clAqua
+      ButtonDown.Degrade.SpeedPercent = 100
+      ButtonDown.Degrade.ToColor = clAqua
+      ButtonDown.Wallpaper.Transparent = False
+      ButtonDisabled.Degrade.FromColor = clRed
+      ButtonDisabled.Degrade.SpeedPercent = 90
+      ButtonDisabled.Degrade.ToColor = clMaroon
+      ButtonDisabled.Wallpaper.Transparent = False
+      Wallpaper.Transparent = False
+    end
+    object cyAdvButton2: TcyAdvButton
+      Left = 404
+      Height = 30
+      Top = 10
+      Width = 75
+      Caption = 'Izlaz'
+      OnClick = cyAdvButton2Click
+      TabOrder = 1
+      BordersNormal = <      
+        item
+          HighlightColor = clNavy
+          ShadowColor = clNavy
+        end>
+      BordersHot = <      
+        item
+          HighlightColor = clAqua
+          ShadowColor = clBlue
+        end>
+      BordersDown = <      
+        item
+          HighlightColor = clBlue
+          ShadowColor = clAqua
+        end>
+      BordersDisabled = <      
+        item
+          HighlightColor = clMaroon
+          ShadowColor = clMaroon
+        end>
+      ButtonNormal.Degrade.FromColor = clAqua
+      ButtonNormal.Degrade.SpeedPercent = 90
+      ButtonNormal.Degrade.ToColor = clBlue
+      ButtonNormal.Wallpaper.Transparent = False
+      ButtonHot.Degrade.BalanceMode = bmReverseFromColor
+      ButtonHot.Degrade.FromColor = clAqua
+      ButtonHot.Degrade.SpeedPercent = 100
+      ButtonHot.Degrade.ToColor = clBlue
+      ButtonHot.Wallpaper.Transparent = False
+      ButtonDown.Degrade.FromColor = clAqua
+      ButtonDown.Degrade.SpeedPercent = 100
+      ButtonDown.Degrade.ToColor = clAqua
+      ButtonDown.Wallpaper.Transparent = False
+      ButtonDisabled.Degrade.FromColor = clRed
+      ButtonDisabled.Degrade.SpeedPercent = 90
+      ButtonDisabled.Degrade.ToColor = clMaroon
+      ButtonDisabled.Wallpaper.Transparent = False
+      Wallpaper.Transparent = False
+    end
+  end
+  object dbeNaziv: TDBEdit
+    Left = 232
+    Height = 29
+    Top = 65
+    Width = 328
+    DataField = 'naziv'
+    DataSource = dsConfig
+    CharCase = ecNormal
+    MaxLength = 200
+    TabOrder = 2
+    OnEnter = dbeNazivEnter
+    OnExit = dbeNazivExit
+  end
+  object dbeAdresa: TDBEdit
+    Left = 232
+    Height = 29
+    Top = 113
+    Width = 328
+    DataField = 'adresa'
+    DataSource = dsConfig
+    CharCase = ecNormal
+    MaxLength = 200
+    TabOrder = 3
+    OnEnter = dbeNazivEnter
+    OnExit = dbeNazivExit
+  end
+  object dbeMesto: TDBEdit
+    Left = 232
+    Height = 29
+    Top = 156
+    Width = 328
+    DataField = 'mesto'
+    DataSource = dsConfig
+    CharCase = ecNormal
+    MaxLength = 200
+    TabOrder = 4
+    OnEnter = dbeNazivEnter
+    OnExit = dbeNazivExit
+  end
+  object dbePIB: TDBEdit
+    Left = 232
+    Height = 29
+    Top = 204
+    Width = 328
+    DataField = 'PIB'
+    DataSource = dsConfig
+    CharCase = ecNormal
+    MaxLength = 80
+    TabOrder = 5
+    OnEnter = dbeNazivEnter
+    OnExit = dbeNazivExit
+  end
+  object dbeTekuci: TDBEdit
+    Left = 232
+    Height = 29
+    Top = 248
+    Width = 328
+    DataField = 'tekuci'
+    DataSource = dsConfig
+    CharCase = ecNormal
+    MaxLength = 120
+    TabOrder = 6
+    OnEnter = dbeNazivEnter
+    OnExit = dbeNazivExit
+  end
+  object dbeBanka: TDBEdit
+    Left = 232
+    Height = 29
+    Top = 292
+    Width = 328
+    DataField = 'banka'
+    DataSource = dsConfig
+    CharCase = ecNormal
+    MaxLength = 120
+    TabOrder = 7
+    OnEnter = dbeNazivEnter
+    OnExit = dbeNazivExit
+  end
+  object lblNaziv: TcyHotLabel
+    Cursor = crHandPoint
+    Left = 77
+    Height = 25
+    Top = 69
+    Width = 113
+    AutoSize = False
+    Caption = 'Naziv firme'
+    Transparent = False
+    Bevels = <>
+    DegradeEnter.FromColor = clWhite
+    DegradeEnter.SpeedPercent = 100
+    DegradeEnter.ToColor = clWhite
+    DegradeLeave.FromColor = clWhite
+    DegradeLeave.SpeedPercent = 100
+    DegradeLeave.ToColor = clBtnFace
+    DegradeMouseDown.FromColor = clWhite
+    DegradeMouseDown.SpeedPercent = 100
+    DegradeMouseDown.ToColor = clBtnFace
+    FontEnter.CharSet = ANSI_CHARSET
+    FontEnter.Color = clBlack
+    FontEnter.Height = -19
+    FontEnter.Name = 'Segoe UI'
+    FontEnter.Pitch = fpVariable
+    FontEnter.Quality = fqDraft
+    FontLeave.CharSet = ANSI_CHARSET
+    FontLeave.Color = clBlack
+    FontLeave.Height = -19
+    FontLeave.Name = 'Segoe UI'
+    FontLeave.Pitch = fpVariable
+    FontLeave.Quality = fqDraft
+    FontMouseDown.Height = 3
+  end
+  object lblAdresa: TcyHotLabel
+    Cursor = crHandPoint
+    Left = 77
+    Height = 25
+    Top = 117
+    Width = 113
+    AutoSize = False
+    Caption = 'Ulica i broj'
+    Transparent = False
+    Bevels = <>
+    DegradeEnter.FromColor = clWhite
+    DegradeEnter.SpeedPercent = 100
+    DegradeEnter.ToColor = clBtnFace
+    DegradeLeave.FromColor = clWhite
+    DegradeLeave.SpeedPercent = 100
+    DegradeLeave.ToColor = clBtnFace
+    DegradeMouseDown.FromColor = clWhite
+    DegradeMouseDown.SpeedPercent = 100
+    DegradeMouseDown.ToColor = clBtnFace
+    FontEnter.CharSet = ANSI_CHARSET
+    FontEnter.Color = clBlack
+    FontEnter.Height = -19
+    FontEnter.Name = 'Segoe UI'
+    FontEnter.Pitch = fpVariable
+    FontEnter.Quality = fqDraft
+    FontLeave.CharSet = ANSI_CHARSET
+    FontLeave.Color = clBlack
+    FontLeave.Height = -19
+    FontLeave.Name = 'Segoe UI'
+    FontLeave.Pitch = fpVariable
+    FontLeave.Quality = fqDraft
+    FontMouseDown.Height = 3
+  end
+  object lblMesto: TcyHotLabel
+    Cursor = crHandPoint
+    Left = 77
+    Height = 25
+    Top = 160
+    Width = 113
+    AutoSize = False
+    Caption = 'Mesto'
+    Transparent = False
+    Bevels = <>
+    DegradeEnter.FromColor = clWhite
+    DegradeEnter.SpeedPercent = 100
+    DegradeEnter.ToColor = clBtnFace
+    DegradeLeave.FromColor = clWhite
+    DegradeLeave.SpeedPercent = 100
+    DegradeLeave.ToColor = clBtnFace
+    DegradeMouseDown.FromColor = clWhite
+    DegradeMouseDown.SpeedPercent = 100
+    DegradeMouseDown.ToColor = clBtnFace
+    FontEnter.CharSet = ANSI_CHARSET
+    FontEnter.Color = clBlack
+    FontEnter.Height = -19
+    FontEnter.Name = 'Segoe UI'
+    FontEnter.Pitch = fpVariable
+    FontEnter.Quality = fqDraft
+    FontLeave.CharSet = ANSI_CHARSET
+    FontLeave.Color = clBlack
+    FontLeave.Height = -19
+    FontLeave.Name = 'Segoe UI'
+    FontLeave.Pitch = fpVariable
+    FontLeave.Quality = fqDraft
+    FontMouseDown.Height = 3
+  end
+  object lblPIB: TcyHotLabel
+    Cursor = crHandPoint
+    Left = 77
+    Height = 25
+    Top = 208
+    Width = 113
+    AutoSize = False
+    Caption = 'PIB'
+    Transparent = False
+    Bevels = <>
+    DegradeEnter.FromColor = clWhite
+    DegradeEnter.SpeedPercent = 100
+    DegradeEnter.ToColor = clBtnFace
+    DegradeLeave.FromColor = clWhite
+    DegradeLeave.SpeedPercent = 100
+    DegradeLeave.ToColor = clBtnFace
+    DegradeMouseDown.FromColor = clWhite
+    DegradeMouseDown.SpeedPercent = 100
+    DegradeMouseDown.ToColor = clBtnFace
+    FontEnter.CharSet = ANSI_CHARSET
+    FontEnter.Color = clBlack
+    FontEnter.Height = -19
+    FontEnter.Name = 'Segoe UI'
+    FontEnter.Pitch = fpVariable
+    FontEnter.Quality = fqDraft
+    FontLeave.CharSet = ANSI_CHARSET
+    FontLeave.Color = clBlack
+    FontLeave.Height = -19
+    FontLeave.Name = 'Segoe UI'
+    FontLeave.Pitch = fpVariable
+    FontLeave.Quality = fqDraft
+    FontMouseDown.Height = 3
+  end
+  object cyHotLabel1: TcyHotLabel
+    Cursor = crHandPoint
+    Left = 77
+    Height = 25
+    Top = 252
+    Width = 113
+    AutoSize = False
+    Caption = 'Tekuci racun'
+    Transparent = False
+    Bevels = <>
+    DegradeEnter.FromColor = clWhite
+    DegradeEnter.SpeedPercent = 100
+    DegradeEnter.ToColor = clBtnFace
+    DegradeLeave.FromColor = clWhite
+    DegradeLeave.SpeedPercent = 100
+    DegradeLeave.ToColor = clBtnFace
+    DegradeMouseDown.FromColor = clWhite
+    DegradeMouseDown.SpeedPercent = 100
+    DegradeMouseDown.ToColor = clBtnFace
+    FontEnter.CharSet = ANSI_CHARSET
+    FontEnter.Color = clBlack
+    FontEnter.Height = -19
+    FontEnter.Name = 'Segoe UI'
+    FontEnter.Pitch = fpVariable
+    FontEnter.Quality = fqDraft
+    FontLeave.CharSet = ANSI_CHARSET
+    FontLeave.Color = clBlack
+    FontLeave.Height = -19
+    FontLeave.Name = 'Segoe UI'
+    FontLeave.Pitch = fpVariable
+    FontLeave.Quality = fqDraft
+    FontMouseDown.Height = 3
+  end
+  object lblBanka: TcyHotLabel
+    Cursor = crHandPoint
+    Left = 77
+    Height = 25
+    Top = 296
+    Width = 113
+    AutoSize = False
+    Caption = 'Banka'
+    Transparent = False
+    Bevels = <>
+    DegradeEnter.FromColor = clWhite
+    DegradeEnter.SpeedPercent = 100
+    DegradeEnter.ToColor = clBtnFace
+    DegradeLeave.FromColor = clWhite
+    DegradeLeave.SpeedPercent = 100
+    DegradeLeave.ToColor = clBtnFace
+    DegradeMouseDown.FromColor = clWhite
+    DegradeMouseDown.SpeedPercent = 100
+    DegradeMouseDown.ToColor = clBtnFace
+    FontEnter.CharSet = ANSI_CHARSET
+    FontEnter.Color = clBlack
+    FontEnter.Height = -19
+    FontEnter.Name = 'Segoe UI'
+    FontEnter.Pitch = fpVariable
+    FontEnter.Quality = fqDraft
+    FontLeave.CharSet = ANSI_CHARSET
+    FontLeave.Color = clBlack
+    FontLeave.Height = -19
+    FontLeave.Name = 'Segoe UI'
+    FontLeave.Pitch = fpVariable
+    FontLeave.Quality = fqDraft
+    FontMouseDown.Height = 3
+  end
+  object qConfig: TZQuery
+    Connection = fMain.conn
+    UpdateObject = usqlConfig
+    CachedUpdates = True
+    SQL.Strings = (
+      'select * from config'
+    )
+    Params = <>
+    left = 475
+    top = 85
+    object qConfignaziv: TStringField
+      FieldKind = fkData
+      FieldName = 'naziv'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 200
+    end
+    object qConfigadresa: TStringField
+      FieldKind = fkData
+      FieldName = 'adresa'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 200
+    end
+    object qConfigmesto: TStringField
+      FieldKind = fkData
+      FieldName = 'mesto'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 200
+    end
+    object qConfigPIB: TStringField
+      FieldKind = fkData
+      FieldName = 'PIB'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 80
+    end
+    object qConfigtekuci: TStringField
+      FieldKind = fkData
+      FieldName = 'tekuci'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 120
+    end
+    object qConfigbanka: TStringField
+      FieldKind = fkData
+      FieldName = 'banka'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 120
+    end
+    object qConfigrecNo: TLongintField
+      FieldKind = fkData
+      FieldName = 'recNo'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+  end
+  object usqlConfig: TZUpdateSQL
+    DeleteSQL.Strings = (
+      'DELETE FROM config'
+      'WHERE'
+      '  ((config.PIB IS NULL AND :OLD_PIB IS NULL) OR (config.PIB = :OLD_PIB))'
+    )
+    InsertSQL.Strings = (
+      'INSERT INTO config'
+      '  (naziv, adresa, mesto, PIB, tekuci, banka)'
+      'VALUES'
+      '  (:naziv, :adresa, :mesto, :PIB, :tekuci, :banka)'
+    )
+    ModifySQL.Strings = (
+      'UPDATE config SET'
+      '  naziv = :naziv,'
+      '  adresa = :adresa,'
+      '  mesto = :mesto,'
+      '  PIB = :PIB,'
+      '  tekuci = :tekuci,'
+      '  banka = :banka'
+      'WHERE'
+      '  ((config.PIB IS NULL AND :OLD_PIB IS NULL) OR (config.PIB = :OLD_PIB))'
+    )
+    UseSequenceFieldForRefreshSQL = False
+    left = 540
+    top = 87
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'naziv'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'adresa'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'mesto'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'PIB'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'tekuci'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'banka'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_PIB'
+        ParamType = ptUnknown
+      end>
+  end
+  object dsConfig: TDataSource
+    DataSet = qConfig
+    left = 400
+    top = 89
+  end
+end

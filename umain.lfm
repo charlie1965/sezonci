@@ -1,0 +1,551 @@
+object fMain: TfMain
+  Left = 489
+  Height = 657
+  Top = 167
+  Width = 608
+  BorderIcons = []
+  BorderStyle = bsSingle
+  Caption = 'OBRACUN ZARADA SEZONACA'
+  ClientHeight = 657
+  ClientWidth = 608
+  Font.CharSet = ANSI_CHARSET
+  Font.Color = clBlack
+  Font.Height = -16
+  Font.Name = 'Segoe UI'
+  Font.Pitch = fpVariable
+  Font.Quality = fqDraft
+  Font.Style = [fsBold]
+  Position = poScreenCenter
+  LCLVersion = '2.0.2.0'
+  object cyAdvPanel1: TcyAdvPanel
+    Left = 0
+    Height = 50
+    Top = 0
+    Width = 608
+    Wallpaper.Transparent = False
+    Align = alTop
+    TabOrder = 0
+    Bevels = <    
+      item
+      end>
+    Degrade.FromColor = clTeal
+    Degrade.SpeedPercent = 100
+    Degrade.ToColor = clBtnFace
+  end
+  object cyAdvPanel2: TcyAdvPanel
+    Left = 0
+    Height = 50
+    Top = 607
+    Width = 608
+    Wallpaper.Transparent = False
+    Align = alBottom
+    TabOrder = 1
+    Bevels = <    
+      item
+      end>
+    Degrade.FromColor = clWhite
+    Degrade.SpeedPercent = 100
+    Degrade.ToColor = clTeal
+  end
+  object cyAdvSpeedButton1: TcyAdvSpeedButton
+    Left = 136
+    Height = 40
+    Top = 91
+    Width = 313
+    Caption = 'Sifarnik drzava'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -19
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = cyAdvSpeedButton1Click
+    ParentFont = False
+    BordersNormal = <    
+      item
+        HighlightColor = clNavy
+        ShadowColor = clNavy
+      end>
+    BordersHot = <    
+      item
+        HighlightColor = clAqua
+        ShadowColor = clBlue
+      end>
+    BordersDown = <    
+      item
+        HighlightColor = clBlue
+        ShadowColor = clAqua
+      end>
+    BordersDisabled = <    
+      item
+        HighlightColor = clMaroon
+        ShadowColor = clMaroon
+      end>
+    ButtonNormal.Degrade.FromColor = clAqua
+    ButtonNormal.Degrade.SpeedPercent = 90
+    ButtonNormal.Degrade.ToColor = clBlue
+    ButtonNormal.Wallpaper.Transparent = False
+    ButtonHot.Degrade.BalanceMode = bmReverseFromColor
+    ButtonHot.Degrade.FromColor = clYellow
+    ButtonHot.Degrade.SpeedPercent = 100
+    ButtonHot.Degrade.ToColor = clMoneyGreen
+    ButtonHot.Wallpaper.Transparent = False
+    ButtonDown.Degrade.FromColor = clAqua
+    ButtonDown.Degrade.SpeedPercent = 100
+    ButtonDown.Degrade.ToColor = clAqua
+    ButtonDown.Wallpaper.Transparent = False
+    ButtonDisabled.Degrade.FromColor = clRed
+    ButtonDisabled.Degrade.SpeedPercent = 90
+    ButtonDisabled.Degrade.ToColor = clMaroon
+    ButtonDisabled.Wallpaper.Transparent = False
+    Wallpaper.Transparent = False
+  end
+  object cyAdvSpeedButton2: TcyAdvSpeedButton
+    Left = 137
+    Height = 40
+    Top = 136
+    Width = 313
+    Caption = 'Sifarnik opstina'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -19
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = cyAdvSpeedButton2Click
+    ParentFont = False
+    BordersNormal = <    
+      item
+        HighlightColor = clNavy
+        ShadowColor = clNavy
+      end>
+    BordersHot = <    
+      item
+        HighlightColor = clAqua
+        ShadowColor = clBlue
+      end>
+    BordersDown = <    
+      item
+        HighlightColor = clBlue
+        ShadowColor = clAqua
+      end>
+    BordersDisabled = <    
+      item
+        HighlightColor = clMaroon
+        ShadowColor = clMaroon
+      end>
+    ButtonNormal.Degrade.FromColor = clAqua
+    ButtonNormal.Degrade.SpeedPercent = 90
+    ButtonNormal.Degrade.ToColor = clBlue
+    ButtonNormal.Wallpaper.Transparent = False
+    ButtonHot.Degrade.BalanceMode = bmReverseFromColor
+    ButtonHot.Degrade.FromColor = clYellow
+    ButtonHot.Degrade.SpeedPercent = 100
+    ButtonHot.Degrade.ToColor = clMoneyGreen
+    ButtonHot.Wallpaper.Transparent = False
+    ButtonDown.Degrade.FromColor = clAqua
+    ButtonDown.Degrade.SpeedPercent = 100
+    ButtonDown.Degrade.ToColor = clAqua
+    ButtonDown.Wallpaper.Transparent = False
+    ButtonDisabled.Degrade.FromColor = clRed
+    ButtonDisabled.Degrade.SpeedPercent = 90
+    ButtonDisabled.Degrade.ToColor = clMaroon
+    ButtonDisabled.Wallpaper.Transparent = False
+    Wallpaper.Transparent = False
+  end
+  object cyAdvSpeedButton3: TcyAdvSpeedButton
+    Left = 136
+    Height = 40
+    Top = 184
+    Width = 313
+    Caption = 'Sifarnik radnika'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -19
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = cyAdvSpeedButton3Click
+    ParentFont = False
+    BordersNormal = <    
+      item
+        HighlightColor = clNavy
+        ShadowColor = clNavy
+      end>
+    BordersHot = <    
+      item
+        HighlightColor = clAqua
+        ShadowColor = clBlue
+      end>
+    BordersDown = <    
+      item
+        HighlightColor = clBlue
+        ShadowColor = clAqua
+      end>
+    BordersDisabled = <    
+      item
+        HighlightColor = clMaroon
+        ShadowColor = clMaroon
+      end>
+    ButtonNormal.Degrade.FromColor = clAqua
+    ButtonNormal.Degrade.SpeedPercent = 90
+    ButtonNormal.Degrade.ToColor = clBlue
+    ButtonNormal.Wallpaper.Transparent = False
+    ButtonHot.Degrade.BalanceMode = bmReverseFromColor
+    ButtonHot.Degrade.FromColor = clYellow
+    ButtonHot.Degrade.SpeedPercent = 100
+    ButtonHot.Degrade.ToColor = clMoneyGreen
+    ButtonHot.Wallpaper.Transparent = False
+    ButtonDown.Degrade.FromColor = clAqua
+    ButtonDown.Degrade.SpeedPercent = 100
+    ButtonDown.Degrade.ToColor = clAqua
+    ButtonDown.Wallpaper.Transparent = False
+    ButtonDisabled.Degrade.FromColor = clRed
+    ButtonDisabled.Degrade.SpeedPercent = 90
+    ButtonDisabled.Degrade.ToColor = clMaroon
+    ButtonDisabled.Wallpaper.Transparent = False
+    Wallpaper.Transparent = False
+  end
+  object cyAdvSpeedButton4: TcyAdvSpeedButton
+    Left = 137
+    Height = 40
+    Top = 232
+    Width = 313
+    Caption = 'Sifarnik poslodavaca'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -19
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = cyAdvSpeedButton4Click
+    ParentFont = False
+    BordersNormal = <    
+      item
+        HighlightColor = clNavy
+        ShadowColor = clNavy
+      end>
+    BordersHot = <    
+      item
+        HighlightColor = clAqua
+        ShadowColor = clBlue
+      end>
+    BordersDown = <    
+      item
+        HighlightColor = clBlue
+        ShadowColor = clAqua
+      end>
+    BordersDisabled = <    
+      item
+        HighlightColor = clMaroon
+        ShadowColor = clMaroon
+      end>
+    ButtonNormal.Degrade.FromColor = clAqua
+    ButtonNormal.Degrade.SpeedPercent = 90
+    ButtonNormal.Degrade.ToColor = clBlue
+    ButtonNormal.Wallpaper.Transparent = False
+    ButtonHot.Degrade.BalanceMode = bmReverseFromColor
+    ButtonHot.Degrade.FromColor = clYellow
+    ButtonHot.Degrade.SpeedPercent = 100
+    ButtonHot.Degrade.ToColor = clMoneyGreen
+    ButtonHot.Wallpaper.Transparent = False
+    ButtonDown.Degrade.FromColor = clAqua
+    ButtonDown.Degrade.SpeedPercent = 100
+    ButtonDown.Degrade.ToColor = clAqua
+    ButtonDown.Wallpaper.Transparent = False
+    ButtonDisabled.Degrade.FromColor = clRed
+    ButtonDisabled.Degrade.SpeedPercent = 90
+    ButtonDisabled.Degrade.ToColor = clMaroon
+    ButtonDisabled.Wallpaper.Transparent = False
+    Wallpaper.Transparent = False
+  end
+  object cyAdvSpeedButton5: TcyAdvSpeedButton
+    Left = 136
+    Height = 40
+    Top = 280
+    Width = 313
+    Caption = 'Sifarnik sezonskih poslova'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -19
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = cyAdvSpeedButton5Click
+    ParentFont = False
+    BordersNormal = <    
+      item
+        HighlightColor = clNavy
+        ShadowColor = clNavy
+      end>
+    BordersHot = <    
+      item
+        HighlightColor = clAqua
+        ShadowColor = clBlue
+      end>
+    BordersDown = <    
+      item
+        HighlightColor = clBlue
+        ShadowColor = clAqua
+      end>
+    BordersDisabled = <    
+      item
+        HighlightColor = clMaroon
+        ShadowColor = clMaroon
+      end>
+    ButtonNormal.Degrade.FromColor = clAqua
+    ButtonNormal.Degrade.SpeedPercent = 90
+    ButtonNormal.Degrade.ToColor = clBlue
+    ButtonNormal.Wallpaper.Transparent = False
+    ButtonHot.Degrade.BalanceMode = bmReverseFromColor
+    ButtonHot.Degrade.FromColor = clYellow
+    ButtonHot.Degrade.SpeedPercent = 100
+    ButtonHot.Degrade.ToColor = clMoneyGreen
+    ButtonHot.Wallpaper.Transparent = False
+    ButtonDown.Degrade.FromColor = clAqua
+    ButtonDown.Degrade.SpeedPercent = 100
+    ButtonDown.Degrade.ToColor = clAqua
+    ButtonDown.Wallpaper.Transparent = False
+    ButtonDisabled.Degrade.FromColor = clRed
+    ButtonDisabled.Degrade.SpeedPercent = 90
+    ButtonDisabled.Degrade.ToColor = clMaroon
+    ButtonDisabled.Wallpaper.Transparent = False
+    Wallpaper.Transparent = False
+  end
+  object cyAdvSpeedButton6: TcyAdvSpeedButton
+    Left = 136
+    Height = 40
+    Top = 328
+    Width = 313
+    Caption = 'Nasi podaci'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -19
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = cyAdvSpeedButton6Click
+    ParentFont = False
+    BordersNormal = <    
+      item
+        HighlightColor = clNavy
+        ShadowColor = clNavy
+      end>
+    BordersHot = <    
+      item
+        HighlightColor = clAqua
+        ShadowColor = clBlue
+      end>
+    BordersDown = <    
+      item
+        HighlightColor = clBlue
+        ShadowColor = clAqua
+      end>
+    BordersDisabled = <    
+      item
+        HighlightColor = clMaroon
+        ShadowColor = clMaroon
+      end>
+    ButtonNormal.Degrade.FromColor = clAqua
+    ButtonNormal.Degrade.SpeedPercent = 90
+    ButtonNormal.Degrade.ToColor = clBlue
+    ButtonNormal.Wallpaper.Transparent = False
+    ButtonHot.Degrade.BalanceMode = bmReverseFromColor
+    ButtonHot.Degrade.FromColor = clYellow
+    ButtonHot.Degrade.SpeedPercent = 100
+    ButtonHot.Degrade.ToColor = clMoneyGreen
+    ButtonHot.Wallpaper.Transparent = False
+    ButtonDown.Degrade.FromColor = clAqua
+    ButtonDown.Degrade.SpeedPercent = 100
+    ButtonDown.Degrade.ToColor = clAqua
+    ButtonDown.Wallpaper.Transparent = False
+    ButtonDisabled.Degrade.FromColor = clRed
+    ButtonDisabled.Degrade.SpeedPercent = 90
+    ButtonDisabled.Degrade.ToColor = clMaroon
+    ButtonDisabled.Wallpaper.Transparent = False
+    Wallpaper.Transparent = False
+  end
+  object cyAdvSpeedButton7: TcyAdvSpeedButton
+    Left = 137
+    Height = 40
+    Top = 424
+    Width = 313
+    Caption = 'Obracuni zarada'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -19
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = cyAdvSpeedButton7Click
+    ParentFont = False
+    BordersNormal = <    
+      item
+        HighlightColor = clNavy
+        ShadowColor = clNavy
+      end>
+    BordersHot = <    
+      item
+        HighlightColor = clAqua
+        ShadowColor = clBlue
+      end>
+    BordersDown = <    
+      item
+        HighlightColor = clBlue
+        ShadowColor = clAqua
+      end>
+    BordersDisabled = <    
+      item
+        HighlightColor = clMaroon
+        ShadowColor = clMaroon
+      end>
+    ButtonNormal.Degrade.FromColor = clAqua
+    ButtonNormal.Degrade.SpeedPercent = 90
+    ButtonNormal.Degrade.ToColor = clBlue
+    ButtonNormal.Wallpaper.Transparent = False
+    ButtonHot.Degrade.BalanceMode = bmReverseFromColor
+    ButtonHot.Degrade.FromColor = clYellow
+    ButtonHot.Degrade.SpeedPercent = 100
+    ButtonHot.Degrade.ToColor = clMoneyGreen
+    ButtonHot.Wallpaper.Transparent = False
+    ButtonDown.Degrade.FromColor = clAqua
+    ButtonDown.Degrade.SpeedPercent = 100
+    ButtonDown.Degrade.ToColor = clAqua
+    ButtonDown.Wallpaper.Transparent = False
+    ButtonDisabled.Degrade.FromColor = clRed
+    ButtonDisabled.Degrade.SpeedPercent = 90
+    ButtonDisabled.Degrade.ToColor = clMaroon
+    ButtonDisabled.Wallpaper.Transparent = False
+    Wallpaper.Transparent = False
+  end
+  object cyAdvSpeedButton8: TcyAdvSpeedButton
+    Left = 137
+    Height = 40
+    Top = 528
+    Width = 313
+    Caption = 'Kraj rada'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -19
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = cyAdvSpeedButton8Click
+    ParentFont = False
+    BordersNormal = <    
+      item
+        HighlightColor = clNavy
+        ShadowColor = clNavy
+      end>
+    BordersHot = <    
+      item
+        HighlightColor = clAqua
+        ShadowColor = clBlue
+      end>
+    BordersDown = <    
+      item
+        HighlightColor = clBlue
+        ShadowColor = clAqua
+      end>
+    BordersDisabled = <    
+      item
+        HighlightColor = clMaroon
+        ShadowColor = clMaroon
+      end>
+    ButtonNormal.Degrade.FromColor = clAqua
+    ButtonNormal.Degrade.SpeedPercent = 90
+    ButtonNormal.Degrade.ToColor = clBlue
+    ButtonNormal.Wallpaper.Transparent = False
+    ButtonHot.Degrade.BalanceMode = bmReverseFromColor
+    ButtonHot.Degrade.FromColor = clYellow
+    ButtonHot.Degrade.SpeedPercent = 100
+    ButtonHot.Degrade.ToColor = clMoneyGreen
+    ButtonHot.Wallpaper.Transparent = False
+    ButtonDown.Degrade.FromColor = clAqua
+    ButtonDown.Degrade.SpeedPercent = 100
+    ButtonDown.Degrade.ToColor = clAqua
+    ButtonDown.Wallpaper.Transparent = False
+    ButtonDisabled.Degrade.FromColor = clRed
+    ButtonDisabled.Degrade.SpeedPercent = 90
+    ButtonDisabled.Degrade.ToColor = clMaroon
+    ButtonDisabled.Wallpaper.Transparent = False
+    Wallpaper.Transparent = False
+  end
+  object btnObracuni: TcyAdvSpeedButton
+    Left = 139
+    Height = 40
+    Top = 377
+    Width = 311
+    Caption = 'Parametri obracuna'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -19
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = btnObracuniClick
+    ParentFont = False
+    BordersNormal = <    
+      item
+        HighlightColor = clNavy
+        ShadowColor = clNavy
+      end>
+    BordersHot = <    
+      item
+        HighlightColor = clAqua
+        ShadowColor = clBlue
+      end>
+    BordersDown = <    
+      item
+        HighlightColor = clBlue
+        ShadowColor = clAqua
+      end>
+    BordersDisabled = <    
+      item
+        HighlightColor = clMaroon
+        ShadowColor = clMaroon
+      end>
+    ButtonNormal.Degrade.FromColor = clAqua
+    ButtonNormal.Degrade.SpeedPercent = 90
+    ButtonNormal.Degrade.ToColor = clBlue
+    ButtonNormal.Wallpaper.Transparent = False
+    ButtonHot.Degrade.BalanceMode = bmReverseFromColor
+    ButtonHot.Degrade.FromColor = clYellow
+    ButtonHot.Degrade.SpeedPercent = 100
+    ButtonHot.Degrade.ToColor = clMoneyGreen
+    ButtonHot.Wallpaper.Transparent = False
+    ButtonDown.Degrade.FromColor = clAqua
+    ButtonDown.Degrade.SpeedPercent = 100
+    ButtonDown.Degrade.ToColor = clAqua
+    ButtonDown.Wallpaper.Transparent = False
+    ButtonDisabled.Degrade.FromColor = clRed
+    ButtonDisabled.Degrade.SpeedPercent = 90
+    ButtonDisabled.Degrade.ToColor = clMaroon
+    ButtonDisabled.Wallpaper.Transparent = False
+    Wallpaper.Transparent = False
+  end
+  object conn: TZConnection
+    ControlsCodePage = cCP_UTF8
+    AutoEncodeStrings = False
+    ClientCodepage = 'UTF-8'
+    Properties.Strings = (
+      'AutoEncodeStrings='
+      'codepage=UTF-8'
+    )
+    AfterConnect = connAfterConnect
+    Port = 0
+    Database = '.\sezonci.lite.db'
+    Protocol = 'sqlite-3'
+    left = 520
+    top = 72
+  end
+end

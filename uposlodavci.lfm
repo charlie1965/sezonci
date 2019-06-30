@@ -1,0 +1,570 @@
+object fPoslodavci: TfPoslodavci
+  Left = 393
+  Height = 562
+  Top = 156
+  Width = 962
+  Caption = 'SIFARNIK POSLODAVACA'
+  ClientHeight = 562
+  ClientWidth = 962
+  Font.CharSet = ANSI_CHARSET
+  Font.Color = clBlack
+  Font.Height = -16
+  Font.Name = 'Segoe UI'
+  Font.Pitch = fpVariable
+  Font.Quality = fqDraft
+  OnCreate = FormCreate
+  Position = poScreenCenter
+  LCLVersion = '2.0.2.0'
+  object cyAdvPanel1: TcyAdvPanel
+    Left = 0
+    Height = 50
+    Top = 0
+    Width = 962
+    Wallpaper.Transparent = False
+    Align = alTop
+    TabOrder = 0
+    Bevels = <    
+      item
+      end>
+    Degrade.FromColor = clTeal
+    Degrade.SpeedPercent = 100
+    Degrade.ToColor = clBtnFace
+  end
+  object cyAdvPanel2: TcyAdvPanel
+    Left = 0
+    Height = 50
+    Top = 512
+    Width = 962
+    Wallpaper.Transparent = False
+    Align = alBottom
+    TabOrder = 1
+    Bevels = <    
+      item
+      end>
+    Degrade.FromColor = clWhite
+    Degrade.SpeedPercent = 100
+    Degrade.ToColor = clTeal
+    object btnZapamti: TcyAdvButton
+      Left = 80
+      Height = 30
+      Top = 11
+      Width = 150
+      Caption = 'Zapamti'
+      OnClick = btnZapamtiClick
+      TabOrder = 0
+      BordersNormal = <      
+        item
+          HighlightColor = clNavy
+          ShadowColor = clNavy
+        end>
+      BordersHot = <      
+        item
+          HighlightColor = clAqua
+          ShadowColor = clBlue
+        end>
+      BordersDown = <      
+        item
+          HighlightColor = clBlue
+          ShadowColor = clAqua
+        end>
+      BordersDisabled = <      
+        item
+          HighlightColor = clMaroon
+          ShadowColor = clMaroon
+        end>
+      ButtonNormal.Degrade.FromColor = clAqua
+      ButtonNormal.Degrade.SpeedPercent = 90
+      ButtonNormal.Degrade.ToColor = clBlue
+      ButtonNormal.Wallpaper.Transparent = False
+      ButtonHot.Degrade.BalanceMode = bmReverseFromColor
+      ButtonHot.Degrade.FromColor = clAqua
+      ButtonHot.Degrade.SpeedPercent = 100
+      ButtonHot.Degrade.ToColor = clBlue
+      ButtonHot.Wallpaper.Transparent = False
+      ButtonDown.Degrade.FromColor = clAqua
+      ButtonDown.Degrade.SpeedPercent = 100
+      ButtonDown.Degrade.ToColor = clAqua
+      ButtonDown.Wallpaper.Transparent = False
+      ButtonDisabled.Degrade.FromColor = clRed
+      ButtonDisabled.Degrade.SpeedPercent = 90
+      ButtonDisabled.Degrade.ToColor = clMaroon
+      ButtonDisabled.Wallpaper.Transparent = False
+      Wallpaper.Transparent = False
+    end
+    object btnIzlaz: TcyAdvButton
+      Left = 648
+      Height = 30
+      Top = 11
+      Width = 150
+      Caption = 'Izlaz'
+      OnClick = btnIzlazClick
+      TabOrder = 1
+      BordersNormal = <      
+        item
+          HighlightColor = clNavy
+          ShadowColor = clNavy
+        end>
+      BordersHot = <      
+        item
+          HighlightColor = clAqua
+          ShadowColor = clBlue
+        end>
+      BordersDown = <      
+        item
+          HighlightColor = clBlue
+          ShadowColor = clAqua
+        end>
+      BordersDisabled = <      
+        item
+          HighlightColor = clMaroon
+          ShadowColor = clMaroon
+        end>
+      ButtonNormal.Degrade.FromColor = clAqua
+      ButtonNormal.Degrade.SpeedPercent = 90
+      ButtonNormal.Degrade.ToColor = clBlue
+      ButtonNormal.Wallpaper.Transparent = False
+      ButtonHot.Degrade.BalanceMode = bmReverseFromColor
+      ButtonHot.Degrade.FromColor = clAqua
+      ButtonHot.Degrade.SpeedPercent = 100
+      ButtonHot.Degrade.ToColor = clBlue
+      ButtonHot.Wallpaper.Transparent = False
+      ButtonDown.Degrade.FromColor = clAqua
+      ButtonDown.Degrade.SpeedPercent = 100
+      ButtonDown.Degrade.ToColor = clAqua
+      ButtonDown.Wallpaper.Transparent = False
+      ButtonDisabled.Degrade.FromColor = clRed
+      ButtonDisabled.Degrade.SpeedPercent = 90
+      ButtonDisabled.Degrade.ToColor = clMaroon
+      ButtonDisabled.Wallpaper.Transparent = False
+      Wallpaper.Transparent = False
+    end
+  end
+  object dbgPoslodavci: TDBGrid
+    Left = 0
+    Height = 462
+    Top = 50
+    Width = 344
+    Align = alLeft
+    Color = clWindow
+    Columns = <    
+      item
+        ReadOnly = False
+        Title.Caption = 'sifra'
+        Width = 50
+        FieldName = 'sifra'
+      end    
+      item
+        Title.Caption = 'naziv firme'
+        Width = 250
+        FieldName = 'naziv'
+      end>
+    DataSource = dsPoslodavci
+    TabOrder = 2
+    TitleFont.CharSet = ANSI_CHARSET
+    TitleFont.Color = clBlack
+    TitleFont.Height = -16
+    TitleFont.Name = 'Segoe UI'
+    TitleFont.Pitch = fpVariable
+    TitleFont.Quality = fqDraft
+  end
+  object dbeUlica: TDBEdit
+    Left = 440
+    Height = 29
+    Top = 96
+    Width = 378
+    DataField = 'ulica'
+    DataSource = dsPoslodavci
+    CharCase = ecNormal
+    MaxLength = 0
+    TabOrder = 3
+    OnEnter = dbeUlicaEnter
+    OnExit = dbeUlicaExit
+  end
+  object dbeBroj: TDBEdit
+    Left = 864
+    Height = 29
+    Top = 96
+    Width = 80
+    DataField = 'broj'
+    DataSource = dsPoslodavci
+    CharCase = ecNormal
+    MaxLength = 0
+    TabOrder = 4
+    OnEnter = dbeBrojEnter
+    OnExit = dbeBrojExit
+  end
+  object dbeMesto: TDBEdit
+    Left = 440
+    Height = 29
+    Top = 137
+    Width = 376
+    DataField = 'nazivMesta'
+    DataSource = dsPoslodavci
+    CharCase = ecNormal
+    MaxLength = 0
+    TabOrder = 5
+    OnEnter = dbeUlicaEnter
+    OnExit = dbeUlicaExit
+  end
+  object dbeTel: TDBEdit
+    Left = 440
+    Height = 29
+    Top = 178
+    Width = 376
+    DataField = 'tel'
+    DataSource = dsPoslodavci
+    CharCase = ecNormal
+    MaxLength = 0
+    TabOrder = 6
+    OnEnter = dbeUlicaEnter
+    OnExit = dbeUlicaExit
+  end
+  object DBEdit5: TDBEdit
+    Left = 440
+    Height = 29
+    Top = 219
+    Width = 376
+    DataField = 'fax'
+    DataSource = dsPoslodavci
+    CharCase = ecNormal
+    MaxLength = 0
+    TabOrder = 7
+    OnEnter = dbeUlicaEnter
+    OnExit = dbeUlicaExit
+  end
+  object dbeFax: TDBEdit
+    Left = 440
+    Height = 29
+    Top = 260
+    Width = 376
+    DataField = 'PIB'
+    DataSource = dsPoslodavci
+    CharCase = ecNormal
+    MaxLength = 0
+    TabOrder = 8
+    OnEnter = dbeUlicaEnter
+    OnExit = dbeUlicaExit
+  end
+  object dbeMatBr: TDBEdit
+    Left = 440
+    Height = 29
+    Top = 301
+    Width = 376
+    DataField = 'matBroj'
+    DataSource = dsPoslodavci
+    CharCase = ecNormal
+    MaxLength = 0
+    TabOrder = 9
+    OnEnter = dbeUlicaEnter
+    OnExit = dbeUlicaExit
+  end
+  object Label1: TLabel
+    Left = 357
+    Height = 21
+    Top = 104
+    Width = 34
+    Caption = 'Ulica'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 824
+    Height = 21
+    Top = 98
+    Width = 28
+    Caption = 'Broj'
+    ParentColor = False
+  end
+  object Label3: TLabel
+    Left = 357
+    Height = 21
+    Top = 145
+    Width = 43
+    Caption = 'Mesto'
+    ParentColor = False
+  end
+  object Label4: TLabel
+    Left = 357
+    Height = 21
+    Top = 186
+    Width = 20
+    Caption = 'tel.'
+    ParentColor = False
+  end
+  object Label5: TLabel
+    Left = 357
+    Height = 21
+    Top = 227
+    Width = 23
+    Caption = 'fax.'
+    ParentColor = False
+  end
+  object Label6: TLabel
+    Left = 357
+    Height = 21
+    Top = 264
+    Width = 22
+    Caption = 'PIB'
+    ParentColor = False
+  end
+  object Label7: TLabel
+    Left = 357
+    Height = 21
+    Top = 305
+    Width = 58
+    Caption = 'mat.broj'
+    ParentColor = False
+  end
+  object qPoslodavci: TZQuery
+    Connection = fMain.conn
+    UpdateObject = usqlPoslodavci
+    CachedUpdates = True
+    SQL.Strings = (
+      'select *'
+      'from firme'
+      'order by sifra DESC'
+      ''
+    )
+    Params = <>
+    left = 134
+    top = 85
+    object qPoslodavcisifra: TLongintField
+      FieldKind = fkData
+      FieldName = 'sifra'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qPoslodavcinaziv: TStringField
+      FieldKind = fkData
+      FieldName = 'naziv'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 200
+    end
+    object qPoslodavciulica: TStringField
+      FieldKind = fkData
+      FieldName = 'ulica'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 120
+    end
+    object qPoslodavcibroj: TStringField
+      FieldKind = fkData
+      FieldName = 'broj'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 40
+    end
+    object qPoslodavcinazivMesta: TStringField
+      FieldKind = fkData
+      FieldName = 'nazivMesta'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 100
+    end
+    object qPoslodavcitel: TStringField
+      FieldKind = fkData
+      FieldName = 'tel'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 80
+    end
+    object qPoslodavcifax: TStringField
+      FieldKind = fkData
+      FieldName = 'fax'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 80
+    end
+    object qPoslodavcikontakt: TStringField
+      FieldKind = fkData
+      FieldName = 'kontakt'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 400
+    end
+    object qPoslodavcibanka: TLongintField
+      FieldKind = fkData
+      FieldName = 'banka'
+      Index = 8
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qPoslodavciPIB: TStringField
+      FieldKind = fkData
+      FieldName = 'PIB'
+      Index = 9
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 80
+    end
+    object qPoslodavcimatBroj: TStringField
+      FieldKind = fkData
+      FieldName = 'matBroj'
+      Index = 10
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 80
+    end
+    object qPoslodavciRecNo: TLongintField
+      FieldKind = fkData
+      FieldName = 'RecNo'
+      Index = 11
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qPoslodavcinazivBanke: TStringField
+      FieldKind = fkData
+      FieldName = 'nazivBanke'
+      Index = 12
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 100
+    end
+  end
+  object usqlPoslodavci: TZUpdateSQL
+    DeleteSQL.Strings = (
+      'DELETE FROM firme'
+      'WHERE'
+      '  ((firme.sifra IS NULL AND :OLD_sifra IS NULL) OR (firme.sifra = :OLD_sifra))'
+    )
+    InsertSQL.Strings = (
+      'INSERT INTO firme'
+      '  (sifra, naziv, ulica, broj, mesto, tel, fax, kontakt, banka, PIB, matBroj, '
+      '   nazivMesta, nazivBanke)'
+      'VALUES'
+      '  (:sifra, :naziv, :ulica, :broj, :mesto, :tel, :fax, :kontakt, :banka, '
+      '   :PIB, :matBroj, :nazivMesta, :nazivBanke)'
+    )
+    ModifySQL.Strings = (
+      'UPDATE firme SET'
+      '  sifra = :sifra,'
+      '  naziv = :naziv,'
+      '  ulica = :ulica,'
+      '  broj = :broj,'
+      '  mesto = :mesto,'
+      '  tel = :tel,'
+      '  fax = :fax,'
+      '  kontakt = :kontakt,'
+      '  banka = :banka,'
+      '  PIB = :PIB,'
+      '  matBroj = :matBroj,'
+      '  nazivMesta = :nazivMesta,'
+      '  nazivBanke = :nazivBanke'
+      'WHERE'
+      '  ((firme.sifra IS NULL AND :OLD_sifra IS NULL) OR (firme.sifra = :OLD_sifra))'
+    )
+    UseSequenceFieldForRefreshSQL = False
+    left = 216
+    top = 85
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'sifra'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'naziv'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'ulica'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'broj'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'mesto'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'tel'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'fax'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'kontakt'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'banka'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'PIB'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'matBroj'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'nazivMesta'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'nazivBanke'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_sifra'
+        ParamType = ptUnknown
+      end>
+  end
+  object dsPoslodavci: TDataSource
+    DataSet = qPoslodavci
+    left = 64
+    top = 85
+  end
+end

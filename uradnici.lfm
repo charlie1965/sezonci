@@ -1,0 +1,809 @@
+object fRadnici: TfRadnici
+  Left = 83
+  Height = 677
+  Top = 163
+  Width = 1226
+  ClientHeight = 677
+  ClientWidth = 1226
+  Font.CharSet = ANSI_CHARSET
+  Font.Color = clBlack
+  Font.Height = -16
+  Font.Name = 'Segoe UI'
+  Font.Pitch = fpVariable
+  Font.Quality = fqDraft
+  OnCreate = FormCreate
+  Position = poScreenCenter
+  LCLVersion = '2.0.2.0'
+  object cyAdvPanel1: TcyAdvPanel
+    Left = 0
+    Height = 50
+    Top = 0
+    Width = 1226
+    Wallpaper.Transparent = False
+    Align = alTop
+    TabOrder = 11
+    Bevels = <    
+      item
+      end>
+    Degrade.FromColor = clTeal
+    Degrade.SpeedPercent = 100
+    Degrade.ToColor = clBtnFace
+  end
+  object cyAdvPanel2: TcyAdvPanel
+    Left = 0
+    Height = 50
+    Top = 627
+    Width = 1226
+    Wallpaper.Transparent = False
+    Align = alBottom
+    TabOrder = 10
+    Bevels = <    
+      item
+      end>
+    Degrade.FromColor = clWhite
+    Degrade.SpeedPercent = 100
+    Degrade.ToColor = clTeal
+    object btnZapamti: TcyAdvButton
+      Left = 160
+      Height = 30
+      Top = 12
+      Width = 139
+      Caption = 'Zapamti'
+      OnClick = btnZapamtiClick
+      TabOrder = 0
+      BordersNormal = <      
+        item
+          HighlightColor = clNavy
+          ShadowColor = clNavy
+        end>
+      BordersHot = <      
+        item
+          HighlightColor = clAqua
+          ShadowColor = clBlue
+        end>
+      BordersDown = <      
+        item
+          HighlightColor = clBlue
+          ShadowColor = clAqua
+        end>
+      BordersDisabled = <      
+        item
+          HighlightColor = clMaroon
+          ShadowColor = clMaroon
+        end>
+      ButtonNormal.Degrade.FromColor = clAqua
+      ButtonNormal.Degrade.SpeedPercent = 90
+      ButtonNormal.Degrade.ToColor = clBlue
+      ButtonNormal.Wallpaper.Transparent = False
+      ButtonHot.Degrade.BalanceMode = bmReverseFromColor
+      ButtonHot.Degrade.FromColor = clAqua
+      ButtonHot.Degrade.SpeedPercent = 100
+      ButtonHot.Degrade.ToColor = clBlue
+      ButtonHot.Wallpaper.Transparent = False
+      ButtonDown.Degrade.FromColor = clAqua
+      ButtonDown.Degrade.SpeedPercent = 100
+      ButtonDown.Degrade.ToColor = clAqua
+      ButtonDown.Wallpaper.Transparent = False
+      ButtonDisabled.Degrade.FromColor = clRed
+      ButtonDisabled.Degrade.SpeedPercent = 90
+      ButtonDisabled.Degrade.ToColor = clMaroon
+      ButtonDisabled.Wallpaper.Transparent = False
+      Wallpaper.Transparent = False
+    end
+    object btnIzlaz: TcyAdvButton
+      Left = 912
+      Height = 30
+      Top = 12
+      Width = 129
+      Caption = 'Izlaz'
+      OnClick = btnIzlazClick
+      TabOrder = 1
+      BordersNormal = <      
+        item
+          HighlightColor = clNavy
+          ShadowColor = clNavy
+        end>
+      BordersHot = <      
+        item
+          HighlightColor = clAqua
+          ShadowColor = clBlue
+        end>
+      BordersDown = <      
+        item
+          HighlightColor = clBlue
+          ShadowColor = clAqua
+        end>
+      BordersDisabled = <      
+        item
+          HighlightColor = clMaroon
+          ShadowColor = clMaroon
+        end>
+      ButtonNormal.Degrade.FromColor = clAqua
+      ButtonNormal.Degrade.SpeedPercent = 90
+      ButtonNormal.Degrade.ToColor = clBlue
+      ButtonNormal.Wallpaper.Transparent = False
+      ButtonHot.Degrade.BalanceMode = bmReverseFromColor
+      ButtonHot.Degrade.FromColor = clAqua
+      ButtonHot.Degrade.SpeedPercent = 100
+      ButtonHot.Degrade.ToColor = clBlue
+      ButtonHot.Wallpaper.Transparent = False
+      ButtonDown.Degrade.FromColor = clAqua
+      ButtonDown.Degrade.SpeedPercent = 100
+      ButtonDown.Degrade.ToColor = clAqua
+      ButtonDown.Wallpaper.Transparent = False
+      ButtonDisabled.Degrade.FromColor = clRed
+      ButtonDisabled.Degrade.SpeedPercent = 90
+      ButtonDisabled.Degrade.ToColor = clMaroon
+      ButtonDisabled.Wallpaper.Transparent = False
+      Wallpaper.Transparent = False
+    end
+  end
+  object Label1: TLabel
+    Left = 736
+    Height = 21
+    Top = 80
+    Width = 34
+    Caption = 'Ulica'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 736
+    Height = 21
+    Top = 119
+    Width = 28
+    Caption = 'Broj'
+    ParentColor = False
+  end
+  object Label3: TLabel
+    Left = 736
+    Height = 21
+    Top = 200
+    Width = 40
+    Caption = 'JMBG'
+    ParentColor = False
+  end
+  object Label4: TLabel
+    Left = 732
+    Height = 21
+    Top = 340
+    Width = 82
+    Caption = 'Sifra drzave'
+    ParentColor = False
+  end
+  object Label6: TLabel
+    Left = 732
+    Height = 21
+    Top = 378
+    Width = 87
+    Caption = 'Sifra opstine'
+    ParentColor = False
+  end
+  object Label8: TLabel
+    Left = 736
+    Height = 21
+    Top = 160
+    Width = 43
+    Caption = 'Mesto'
+    ParentColor = False
+  end
+  object Label9: TLabel
+    Left = 736
+    Height = 21
+    Top = 240
+    Width = 55
+    Caption = 'mob.tel.'
+    ParentColor = False
+  end
+  object DBEdit1: TDBEdit
+    Left = 830
+    Height = 29
+    Top = 80
+    Width = 362
+    DataField = 'ulica'
+    DataSource = dsRadnici
+    CharCase = ecNormal
+    MaxLength = 80
+    TabOrder = 0
+    OnEnter = DBEdit1Enter
+    OnExit = DBEdit1Exit
+  end
+  object DBEdit2: TDBEdit
+    Left = 830
+    Height = 29
+    Top = 117
+    Width = 80
+    DataField = 'broj'
+    DataSource = dsRadnici
+    CharCase = ecNormal
+    MaxLength = 40
+    TabOrder = 1
+    OnEnter = DBEdit1Enter
+    OnExit = DBEdit1Exit
+  end
+  object DBEdit3: TDBEdit
+    Left = 830
+    Height = 29
+    Top = 154
+    Width = 362
+    DataField = 'mesto'
+    DataSource = dsRadnici
+    CharCase = ecNormal
+    MaxLength = 80
+    TabOrder = 2
+    OnEnter = DBEdit1Enter
+    OnExit = DBEdit1Exit
+  end
+  object DBEdit4: TDBEdit
+    Left = 830
+    Height = 29
+    Top = 191
+    Width = 362
+    DataField = 'jmbg'
+    DataSource = dsRadnici
+    CharCase = ecNormal
+    MaxLength = 52
+    TabOrder = 3
+    OnEnter = DBEdit1Enter
+    OnExit = DBEdit1Exit
+  end
+  object DBEdit5: TDBEdit
+    Left = 830
+    Height = 29
+    Top = 228
+    Width = 362
+    DataField = 'tel'
+    DataSource = dsRadnici
+    CharCase = ecNormal
+    MaxLength = 80
+    TabOrder = 4
+    OnEnter = DBEdit1Enter
+    OnExit = DBEdit1Exit
+  end
+  object DBEdit6: TDBEdit
+    Left = 826
+    Height = 29
+    Top = 333
+    Width = 80
+    DataField = 'sifraDrzave'
+    DataSource = dsRadnici
+    CharCase = ecNormal
+    MaxLength = 12
+    TabOrder = 5
+    OnEnter = DBEdit1Enter
+    OnExit = DBEdit1Exit
+  end
+  object DBEdit7: TDBEdit
+    Left = 826
+    Height = 29
+    Top = 370
+    Width = 80
+    DataField = 'sifraOpstine'
+    DataSource = dsRadnici
+    CharCase = ecNormal
+    MaxLength = 12
+    TabOrder = 7
+    OnEnter = DBEdit1Enter
+    OnExit = DBEdit1Exit
+  end
+  object Label7: TLabel
+    Left = 732
+    Height = 21
+    Top = 412
+    Width = 22
+    Caption = 'Pol'
+    ParentColor = False
+  end
+  object DBEdit8: TDBEdit
+    Left = 826
+    Height = 29
+    Top = 409
+    Width = 80
+    DataField = 'pol'
+    DataSource = dsRadnici
+    CharCase = ecNormal
+    MaxLength = 40
+    TabOrder = 9
+    OnEnter = DBEdit1Enter
+    OnExit = DBEdit1Exit
+  end
+  object dblDrzava: TRxDBLookupCombo
+    Left = 948
+    Height = 33
+    Top = 329
+    Width = 244
+    AutoSize = True
+    ButtonOnlyWhenFocused = False
+    ButtonWidth = 15
+    Color = clWindow
+    DataField = 'sifraDrzave'
+    DataSource = dsRadnici
+    PopUpFormOptions.Columns = <>
+    Flat = False
+    Glyph.Data = {
+      C2000000424DC200000000000000360000002800000007000000050000000100
+      2000000000008C00000064000000640000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000FF0000000000000000000000000000000000000000000000FF0000
+      00FF000000FF000000000000000000000000000000FF000000FF000000FF0000
+      00FF000000FF0000000000000000000000000000000000000000000000000000
+      000000000000
+    }
+    NumGlyphs = 1
+    OnEnter = dblDrzavaEnter
+    OnExit = dblDrzavaExit
+    ParentColor = False
+    ReadOnly = False
+    TabOrder = 6
+    TabStop = True
+    LookupDisplay = 'nazivDrzave'
+    LookupField = 'sifrraDrzave'
+    LookupSource = dsDrzave
+  end
+  object dblOpstine: TRxDBLookupCombo
+    Left = 948
+    Height = 33
+    Top = 370
+    Width = 244
+    AutoSize = True
+    ButtonOnlyWhenFocused = False
+    ButtonWidth = 15
+    Color = clWindow
+    DataField = 'sifraOpstine'
+    DataSource = dsRadnici
+    PopUpFormOptions.Columns = <>
+    Flat = False
+    Glyph.Data = {
+      C2000000424DC200000000000000360000002800000007000000050000000100
+      2000000000008C00000064000000640000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000FF0000000000000000000000000000000000000000000000FF0000
+      00FF000000FF000000000000000000000000000000FF000000FF000000FF0000
+      00FF000000FF0000000000000000000000000000000000000000000000000000
+      000000000000
+    }
+    NumGlyphs = 1
+    OnChange = dblOpstineChange
+    ParentColor = False
+    ReadOnly = False
+    TabOrder = 8
+    TabStop = True
+    LookupDisplay = 'nazivOpstine'
+    LookupField = 'sifra'
+    LookupSource = dsOpstine
+  end
+  object lblPol: TLabel
+    Left = 948
+    Height = 21
+    Top = 417
+    Width = 144
+    AutoSize = False
+    Caption = '( MUSKI) - ZENSKI )'
+    ParentColor = False
+  end
+  object dbgRadnici: TDBGrid
+    Left = 0
+    Height = 577
+    Top = 50
+    Width = 720
+    Align = alLeft
+    Color = clWindow
+    Columns = <    
+      item
+        Title.Caption = 'sifra'
+        Width = 50
+        FieldName = 'sifra'
+      end    
+      item
+        Title.Caption = 'prezime'
+        Width = 200
+        FieldName = 'prezime'
+      end    
+      item
+        Title.Caption = 'ime'
+        Width = 200
+        FieldName = 'ime'
+      end    
+      item
+        Title.Caption = 'ime roditelja'
+        Width = 200
+        FieldName = 'imeroditelja'
+      end>
+    DataSource = dsRadnici
+    TabOrder = 12
+    TitleFont.CharSet = ANSI_CHARSET
+    TitleFont.Color = clBlack
+    TitleFont.Height = -16
+    TitleFont.Name = 'Segoe UI'
+    TitleFont.Pitch = fpVariable
+    TitleFont.Quality = fqDraft
+  end
+  object lblPol1: TLabel
+    Left = 864
+    Height = 21
+    Top = 272
+    Width = 320
+    AutoSize = False
+    Caption = '( unosi se u obliku : 0657226700 )'
+    ParentColor = False
+  end
+  object qRadnici: TZQuery
+    Connection = fMain.conn
+    UpdateObject = usqlRadnici
+    CachedUpdates = True
+    OnNewRecord = qRadniciNewRecord
+    SQL.Strings = (
+      'SELECT *'
+      'FROM  radnici'
+      ''
+    )
+    Params = <>
+    left = 216
+    top = 88
+    object qRadnicisifra: TLargeintField
+      FieldKind = fkData
+      FieldName = 'sifra'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qRadniciprezime: TStringField
+      FieldKind = fkData
+      FieldName = 'prezime'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 80
+    end
+    object qRadniciime: TStringField
+      FieldKind = fkData
+      FieldName = 'ime'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 80
+    end
+    object qRadniciimeroditelja: TStringField
+      FieldKind = fkData
+      FieldName = 'imeroditelja'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 80
+    end
+    object qRadnicijmbg: TStringField
+      FieldKind = fkData
+      FieldName = 'jmbg'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 52
+    end
+    object qRadniciulica: TStringField
+      FieldKind = fkData
+      FieldName = 'ulica'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 80
+    end
+    object qRadnicibroj: TStringField
+      FieldKind = fkData
+      FieldName = 'broj'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 40
+    end
+    object qRadnicitel: TStringField
+      FieldKind = fkData
+      FieldName = 'tel'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 80
+    end
+    object qRadnicimesto: TStringField
+      FieldKind = fkData
+      FieldName = 'mesto'
+      Index = 8
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 80
+    end
+    object qRadnicipol: TStringField
+      FieldKind = fkData
+      FieldName = 'pol'
+      Index = 9
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 40
+    end
+    object qRadnicisifraOpstine: TStringField
+      FieldKind = fkData
+      FieldName = 'sifraOpstine'
+      Index = 10
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 12
+    end
+    object qRadnicisifraDrzave: TStringField
+      FieldKind = fkData
+      FieldName = 'sifraDrzave'
+      Index = 11
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 12
+    end
+    object qRadnicinazivDrzave: TStringField
+      FieldKind = fkLookup
+      FieldName = 'nazivDrzave'
+      Index = 12
+      KeyFields = 'sifraDrzave'
+      LookupCache = False
+      LookupDataSet = qDrzave
+      LookupKeyFields = 'sifrraDrzave'
+      LookupResultField = 'nazivDrzave'
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 200
+    end
+    object StringField1: TStringField
+      FieldKind = fkLookup
+      FieldName = 'nazivOpstine'
+      Index = 13
+      KeyFields = 'sifraOpstine'
+      LookupCache = False
+      LookupDataSet = qOpstine
+      LookupKeyFields = 'sifra'
+      LookupResultField = 'nazivOpstine'
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 80
+    end
+    object qRadniciimePrezime: TStringField
+      FieldKind = fkData
+      FieldName = 'imePrezime'
+      Index = 14
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 200
+    end
+  end
+  object dsOpstine: TDataSource
+    DataSet = qOpstine
+    left = 504
+    top = 116
+  end
+  object dsDrzave: TDataSource
+    DataSet = qDrzave
+    left = 502
+    top = 190
+  end
+  object qOpstine: TZReadOnlyQuery
+    Connection = fMain.conn
+    SQL.Strings = (
+      'select * from opstine'
+      'order by nazivOpstine'
+    )
+    Params = <>
+    left = 580
+    top = 120
+    object qOpstinerbr: TLongintField
+      FieldKind = fkData
+      FieldName = 'rbr'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+    end
+    object qOpstinenazivOpstine: TStringField
+      FieldKind = fkData
+      FieldName = 'nazivOpstine'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      Size = 80
+    end
+    object qOpstinesifra: TStringField
+      FieldKind = fkData
+      FieldName = 'sifra'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      Size = 12
+    end
+    object qOpstinerecNo: TLongintField
+      FieldKind = fkData
+      FieldName = 'recNo'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+    end
+  end
+  object qDrzave: TZReadOnlyQuery
+    Connection = fMain.conn
+    SQL.Strings = (
+      'select * from sifarnikDrzava'
+      'order by nazivDrzave'
+    )
+    Params = <>
+    left = 576
+    top = 194
+    object qDrzavesifrraDrzave: TStringField
+      FieldKind = fkData
+      FieldName = 'sifrraDrzave'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      Size = 12
+    end
+    object qDrzavenazivDrzave: TStringField
+      FieldKind = fkData
+      FieldName = 'nazivDrzave'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      Size = 200
+    end
+    object qDrzaverecNo: TLongintField
+      FieldKind = fkData
+      FieldName = 'recNo'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+    end
+  end
+  object usqlRadnici: TZUpdateSQL
+    DeleteSQL.Strings = (
+      'DELETE FROM radnici'
+      'WHERE'
+      '  ((radnici.sifra IS NULL AND :OLD_sifra IS NULL) OR (radnici.sifra = :OLD_sifra))'
+    )
+    InsertSQL.Strings = (
+      'INSERT INTO radnici'
+      '  (sifra, prezime, ime, imeroditelja, ulica, broj, tel, mesto, pol, sifraOpstine, '
+      '   sifraDrzave, jmbg, imePrezime)'
+      'VALUES'
+      '  (:sifra, :prezime, :ime, :imeroditelja, :ulica, :broj, :tel, :mesto, '
+      '   :pol, :sifraOpstine, :sifraDrzave, :jmbg, :imePrezime)'
+    )
+    ModifySQL.Strings = (
+      'UPDATE radnici SET'
+      '  sifra = :sifra,'
+      '  prezime = :prezime,'
+      '  ime = :ime,'
+      '  imeroditelja = :imeroditelja,'
+      '  ulica = :ulica,'
+      '  broj = :broj,'
+      '  tel = :tel,'
+      '  mesto = :mesto,'
+      '  pol = :pol,'
+      '  sifraOpstine = :sifraOpstine,'
+      '  sifraDrzave = :sifraDrzave,'
+      '  jmbg = :jmbg,'
+      '  imePrezime = :imePrezime'
+      'WHERE'
+      '  ((radnici.sifra IS NULL AND :OLD_sifra IS NULL) OR (radnici.sifra = :OLD_sifra))'
+    )
+    UseSequenceFieldForRefreshSQL = False
+    left = 275
+    top = 88
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'sifra'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'prezime'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'ime'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'imeroditelja'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'ulica'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'broj'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'tel'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'mesto'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'pol'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'sifraOpstine'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'sifraDrzave'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'jmbg'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'imePrezime'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_sifra'
+        ParamType = ptUnknown
+      end>
+  end
+  object dsRadnici: TDataSource
+    DataSet = qRadnici
+    left = 340
+    top = 93
+  end
+end
